@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Search - Liuzj的博客</title>
+  
+
+  
+  
+  <meta name="description" content="Android developer">
+  <meta name="author" content="Zijian Liu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-38342303-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/avatar.png' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Liuzj的博客</a>
+			</h1>
+			<subtitle>
+				思考一切
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+<div class='search-container'>
+	<input type="text" id='search-form'>
+
+	<ul class="cat-list">
+		
+	</ul>
+
+	<div class="archive-cards">
+			<div class='Card-archive' style='display:none'>
+				<div class="Card-body">
+					<h3 class='Card-title'>
+						<a>
+						</a>
+					</h3>
+					<div class="Card-meta">
+						<ul>
+							<li><i class='fa fa-calendar'></i> <span class='Card-date'></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<script src="/libs/fuse.js/dist/fuse.min.js"></script>
+<script>
+	var options = {
+		shouldSort: true,
+		threshold: 0.4,
+		tokenize: true,
+		location: 0,
+		distance: 100,
+		maxPatternLength: 32,
+		minMatchCharLength: 2,
+		keys: [
+			"title",
+			"author",
+			"tags"
+		]
+	};
+	var s = '[{"title":"二零一八年终总结","date":"2018-12-30T16:00:00.000Z","content":"说两句\n总想说两句，又不知从何说起。都赖自己读书少，所以给自己立几个flag，好让明年有个奔头\n目标一\n把自己技术提升个level，既然不知道什么适合自己，那就把现在手头得工作做好。\n\n基础\n算法\n框架及源码\n争取自己搞个开源项目\n抽时间学学python，用python搭个后台玩玩\n\n目标二\n常回家看看，尽量多陪陪家人\n可能是以前太小不懂事吧。家里就我一个孩子，宠着惯着，什么都觉得理所应当，很少考虑父母感受，直到最亲得爷爷奶奶相继去世才发现家人得重要性。今天给老妈过个生日，本来是很小很小很平常很平常得一个小惊喜，没想到老妈竟然感动得哭了，才发现亏欠家里实在太多了太多了，以后抽时间多回家看看吧。趁着自己还年轻还自由。\n目标三\n多读书，跟别人交流得时候总是有很多东西想说，却不知该怎么表达，才后悔自己读书少\n虽说现在还不知道看啥，但先给自己定个小目标，最少明年要读五本书。看后写观后感\n小感慨\n算了，也不知道说啥了就这样吧，憋一肚子话不知道怎么表达就这样憋死我吧。\n再见2018，加油2019.让自己变得更强，变得更优秀\n\n\n2018年12月31日22点17分&emsp;\n\n","tags":["年终总结","目标"],"path":"2018/12/31/2018年度总结/","external_link":""},{"title":"Android开发配置wifi调试教程","date":"2016-12-17T16:00:00.000Z","content":"背景\n由于之前一直用数据线调试，手机连接电脑，手机一直处于充电状态，就导致了电池特别不着用，开始充一次电可以用两天左右，调试了不到俩月，现在充满电用不了一天就没电了。所以还是推荐通过wifi调试，第一对手机电池好，第二炫酷呀，可以装x。哈哈，下面我介绍两种方式：\n第一种：针对没数据线时这种情况\n第一步、需要手机先下载个安卓终端模拟器，当然去网上搜也有很多的，打开终端，依次执行下面步骤\n\n\n第二步、点击你连接的wifi，然后看下面有你的ip地址，记下来\n第三步、在电脑上，上运行cmd命令提示符，键入如下命令：\nadb connect 上一步让你记得ip地址:5555\n如果没有把adb配置到环境变量里，则需要要先 cd到adb的目录中在执行上述步骤\n如果提示连接成功，则说明搞定了。\n第二种：针对Android Studio，相对第一种简单很多\n第一步、先打开安卓studio的Settings-&gt; Plugins-&gt; Browse Repositories，在里面搜索ADB WiFI\n\n第二步，重启studio，哈哈\n第三步、也是关键的一步，直接看下图\n\n\n直接点击ADB USB to WIFI就ok了。\n最后\n体验炫酷的wifi调试吧。\n","tags":["Wifi调试","Android 开发"],"path":"2016/12/18/Android开发配置wifi调试教程/","external_link":""},{"title":"Activity总结","date":"2016-05-07T16:00:00.000Z","content":"看了标题也许你会想，也许你会说，activity我天天用，我最了解不过了，没有什么是我不清楚的。你怕是在唬我吧？那下面就看看我说的这些你都了解嘛\n基础知识\n\n\n正常情况下的生命周期\n\n\nonCreate：表示Activity正在被创建，我们可以做一些初始化工作，没啥子可说的。\n\n\nonRestart：当当前Activity从不可见重新变为可见状态时，该方法会被调用。\n\n\nonStart：这时Activity已经可见的，但是处于后台，无法和用户交互。\n\n\nonResume：这时Activity已经可见的，但是处于前台。\n\n\nonPause：在这个方法可以做一些存储数据，停止动画的操作，但是不能太耗时，因为这会影响到新Activity的显示，onPause必须执行完，新Activity的onResume才会执行。\n\n\nonStop:Activity即将停止，可以做一些稍微重量级的回收工作，同样不能太耗时。\n\n\nonDestory:表示Activity即将销毁，我们可以做一些回收工作和资源释放工作。\n\n\nActivity第一次启动会调用onCreate–&gt;onStart–&gt;onResume,当用户打开新的Activity或者切换到桌面的时候，会调用onPause–&gt;onStop，如果这个Activity采用透明主题，不会调用onStop,是因为新Activity透明主题我们还能看到下面那个之前Activity，所以不会调用onStop，再回到原Activity时调用onRestart–&gt;onStart–&gt;onResume.\n\n\n异常情况下的生命周期\n\n\n资源相关的系统配置发生改变导致Avtivity被杀死并重新创建\n\n\n资源不足时导致优先级低的Activity被杀死\n\n\n…\n\n\nActivity会调用onSaveInstanceState方法，系统自动为我们做了一定的恢复工作，并且重启为我们恢复这些数据，比如文本框中用户输入的数据，listView滚动位置等，具体的我们可以查看特定View的源码。\n\n\nActivity的启动模式\n1、使用场景\n\n\nstandard：当需要每次请求都新开一个实例的时候，比如，浏览器开多个浏览窗口。\n\n\nsingleTop：适合作为接受通知的启动界面，比如，客户端收到10条推送，如果是标准模式，分别点击这10个推送，就会启动10个这样的显示内容的界面，而如果是singleTop，则只会打开一个显示界面。\n\n\nsingleTask：适合作为程序的入口，不管其他程序打开该界面多少次，都只会在任务栈中存在一份，比如浏览器的启动界面。\n\n\nsingleInstance：适合永远都不会变化的界面，比如闹钟的提醒界面，在比如拨号程序的呼叫界面。\n\n\n2、IntentFilter的匹配规则\n\n\naction的匹配规则：要求Intent中的action存在且必须和过滤规则中的其中一个action相同，这个区分大小写，如果相同的字符串，大小写字母不同，action会匹配失败。\n\n\ncategory匹配规则：这个可有可无，如果有，则必须和过滤规则中的其中一个category相同，如果不写的话，在启动Activity时系统会自动加上&quot;android.intent.category.DEFAULT&quot;\n\n\ndata可进一步分为uri（由scheme、host、port、path | pathPattern | pathPrefix这4部分组成）和mimetype。Intent的uri可通过setData方法设置，mimetype可通过setType方法设置。隐式Intent也必须指定data。同action类似，只要Intent的data只要与Intent Filter中的任一个data声明完全相同，data方面就匹配成功。需要注意的是：若Intent Filter的data声明部分未指定uri，则缺省uri为content或file，Intent中的uri的scheme部分需为content或file才能匹配；若要为Intent指定完整的data，必须用setDataAndType方法，原因请看setData和setType方法的源码：\n\n\n\n\n\npublic Intent setData(Uri data) {\n    mData = data;\n    mType = null;\n    return this;\n}\n\npublic Intent setType(String type) {\n    mData = null;\n    mType = type;\n    return this;\n}\n\n从以上代码可以看到，setData会把mimeType置为null，setType会把uri置为null。下面我们来举例说明一下data的匹配。首先我们先来看一下Intent Filter中指定data的语法：\n&lt;data android:scheme=&quot;...“\n      android:host=&quot;...&quot;\n      android:port=&quot;...&quot;\n      android:path=&quot;...&quot;\n      android:pathPattern=&quot;...&quot;\n      android:pathPrefix=&quot;...&quot;\n      android:mimeType=&quot;...&quot; &gt;\n\n其中scheme、host等各个部分无需全部指定。假如我们为MyActivity的Intent Filter指定了如下data：\n&lt;intent-filter&gt;\n    &lt;data android:mimeType=&quot;vidoempeg&quot; android:scheme=&quot;http&quot; android:host=&quot;www.xxx.com&quot; &gt;\n    &lt;data android:mimeType=&quot;textplain&quot; android:scheme=&quot;http&quot; &gt;\n&lt;intent-filter&gt;\n\n那么我们的Intent想要匹配，mimeType可以为”textplain&quot;或“videompeg&quot;,scheme必须为”http“，host则没有限制，因为第二个data没有指定host。\n最后\n这就是我知道的关于activity的一些知识，若有叙述不清晰或是不准确的地方希望大家指出，如果你知道更多知识，欢迎给我评论，大家一起学习进步。谢谢观看\n参考资料 《Android开发艺术探索》\n","tags":["四大组件","Activity"],"path":"2016/05/08/Activity总结/","external_link":""},{"title":"EventBus使用笔记","date":"2017-03-01T16:00:00.000Z","content":"概念\nEventBus是一款针对Android优化的发布订阅事件总线。主要功能是替代Intent,Handler,BroadCast在Fragment，Activity，Service，线程之间传递消息.优点是开销小，代码更优雅。以及将发送者和接收者解耦。\nEventBus源码点我\n使用\n1、准备工作\n因为我使用的是Android Studio，所以第一步要添加依赖：\n￼\n2、基本用法\n1、在需要接收事件分发的页面注册EventBus\nEventBus.getDefault().register(this);\n2、在第二个页面或其他需要发送事件，发送事件使用的是post方法，里面是一个object参数，我们可以自己定义一个类，然后把这个实例传递进去\nEventBus.getDefault().post(new EventParam());\n3、当然就是在注册事件分发的页面接收传递过来的事件了，有四种方法：\nonEvent()：在哪个线程发的消息，就在哪个线程执行。\nonEventMainThread()：无论在哪个线程发布，都在主线程执行\nonEventBackground()：如果在主线程发布的，他会在子线程执行，如果在子线程发布，那么他会在其他子线程执行。\nonEventAsync()：无论在哪个线程发布的都会新创建一个线程执行\n4、一定要在注册EventBus结束的时候解除绑定\nEventBus.getDefault().unregister(this);\n3、进阶，上面已经说了四个方法的使用了，下面说下怎么区别这四个方法。\n就一句话，根据传递进来的参数，参数相同的就会被执行，不同的则不执行\n","tags":["EventBus"],"path":"2017/03/02/EventBus使用笔记/","external_link":""},{"title":"Android Studio SVN使用手册","date":"2016-09-05T16:00:00.000Z","content":"Android Studio 配置及使用：\n\n下载客户端：下载地址:http:tortoisesvn.netdownloads.html\n\n安装配置：这个需要自己独立安装带有 command line 功能的 SVN 客户端，据说 1.7 之后开始支持 command line 模式。如图，安装时必须自定义选择 command line 否则不会安装的\n\n\n\n\n安装完成后，打开 IDE 的 setting 配置面板：\n\n\n如上图路径 Version Control 下的 Subersion 设置：\nUse Command Line Client 选择浏览到你本地安装 TortoiseSVN 的 svn.exe 文件路径，如下图：（注意输入框最右侧有个浏览的按钮，有可能没显示出来，拉伸窗口即可见）\n\n\n\n\n然后在setting 点击Version Control，配置成下图样子\n\n3.提交、签出 SVN 这个比较繁琐的也是容易出错的（当然你会了也就不繁琐了 哈哈）：\n\n\n\n推荐使用这种方式，先share到服务器指定目录，这样做的意思是，先和服务器建立链接，注意share完之后服务器还是没有你的代码，只是单纯的和服务器建立了链接关系。如果想让你的代码同步到服务器则需要commit一下，commit之后你的代码就正式传到服务器上了。这时你在修改文件就会变颜色，每种颜色都对应一种状态，具体的自己体会吧。\n\n特别说明一点：如果不需要提交忽略文件到服务器的话，需要在和服务器建立关联（share）之前添加忽略文件，之后添加忽略仿佛没有什么效果。\n\n在Android中不推荐直接把项目import到服务器，因为这样在以后并没有和服务器建立关联，也就导致在以后工作中会出现一些问题，具体问题可百度，有很多，楼主在这就不详细说了\n4. Ignore 指定忽略文件或目录\nAndroidStudio 的 Setting-->Version control -->Ignored files，具体怎么添加忽略文件我也不说了，网上也有很多教程\n\n然后就可以提交到服务器了,对于更新和提交\n\n![](http:i.imgur.combFEWxOa.png)\n\n这两个小按钮很方面操作，向上的绿色是commit ，向下的蓝色 是 update\n\n注意：SVN是以服务器为准的，如果需要更新，首先需要把服务器上的checkout到本地，然后在Update project 如果update后服务器没有修改，则需要commit changes\n\n更新操作:\n\n如在MainActivity中添加了几行注释：\n\n![](http:i.imgur.comh8COAPu.png)\n\n这时SVN就会用本地文件对照服务器，发现有修改的文件，就会把对应的文件名变色\n\n![](http:i.imgur.comiKN9e1a.png)\n\n如果要更新的话，点击向下箭头，update project\n\n![](http:i.imgur.comnM957t7.png)\n\n弹出这个界面，选ok\n\n![](http:i.imgur.comSvSYhmy.png)\n\n下面的version control就会有所提示\n\n![](http:i.imgur.comtVIud2V.png)\n\n这样我们就可以看到Version control 提示更新了，MainActivity文件颜色也和其他的一样了。\n\n我也时才从这个坑跳出来，希望能帮到你，如果有什么问题请在下面评论，我会认真看的。大家共同学习成长","tags":["SVN","使用手册"],"path":"2016/09/06/Android Studio SVN使用手册/","external_link":""},{"title":"Git 操作","date":"2017-11-20T16:00:00.000Z","content":"git 命令\n\n创建本地仓库\n\n1git init\n\n获取远程仓库\n\n12git clone [url]例：git clone https:github.comyouyourpro.git\n\n创建远程仓库\n\n12345678910111213141516 添加一个新的 remote 远程仓库git remote add [remote-name] [url]例：git remote add origin https:github.comyouyourpro.gitorigin：相当于该远程仓库的别名 列出所有 remote 的别名git remote 列出所有 remote 的 urlgit remote -v 删除一个 renotegit remote rm [name] 重命名 remotegit remote rename [old-name] [new-name]\n\n从本地仓库中删除\n\n123git rm file.txt          从版本库中移除，删除文件git rm file.txt -cached  从版本库中移除，不删除原始文件git rm -r xxx            从版本库中删除指定文件夹\n\n从本地仓库中添加新的文件\n\n12git add .                添加所有文件git add file.txt         添加指定文件\n\n提交，把缓存内容提交到 HEAD 里\n\n1git commit -m &quot;注释&quot;\n\n撤销\n\n1234567891011 撤销最近的一个提交.git revert HEAD 取消 commit + addgit reset --mixed 取消 commitgit reset --soft 取消 commit + add + local workinggit reset --hard\n\n把本地提交 push 到远程服务器\n\n12git push [remote-name] [loca-branch]:[remote-branch]例：git push origin master:master\n\n查看状态\n\n1git status\n\n从远程库中下载新的改动\n\n1git fetch [remote-name][branch]\n\n合并下载的改动到分支\n\n1git merge [remote-name][branch]\n\n从远程库中下载新的改动\n\n1234pull = fetch + mergegit pull [remote-name] [branch]例：git pull origin master\n\n分支\n\n1234567891011 列出分支git branch 创建一个新的分支git branch (branch-name) 删除一个分支git branch -d (branch-nam) 删除 remote 的分支git push (remote-name) :(remote-branch)\n\n切换分支\n\n12345 切换到一个分支git checkout [branch-name] 创建并切换到该分支git checkout -b [branch-name]\n与github建立ssh通信，让Git操作免去输入密码的繁琐。\n\n首先呢，我们先建立ssh密匙。\n\n\nssh key must begin with ‘ssh-ed25519’, ‘ssh-rsa’, ‘ssh-dss’, ‘ecdsa-sha2-nistp256’, ‘ecdsa-sha2-nistp384’, or ‘ecdsa-sha2-nistp521’.  – from github\n\n根据以上文段我们可以知道github所支持的ssh密匙类型，这里我们创建ssh-rsa密匙。\n在command line 中输入以下指令:``ssh-keygen -t rsa``去创建一个ssh-rsa密匙。如果你并不需要为你的密匙创建密码和修改名字，那么就一路回车就OK，如果你需要，请您自行Google翻译，因为只是英文问题。\n\n\n$ ssh-keygen -t rsa\nGenerating publicprivate rsa key pair.\n您可以根据括号中的路径来判断你的.ssh文件放在了什么地方\nEnter file in which to save the key (cUsersLiang Guan Quan.sshid_rsa):\n\n\n到 https:github.comsettingskeys 这个地址中去添加一个新的SSH key，然后把你的xx.pub文件下的内容文本都复制到Key文本域中，然后就可以提交了。\n添加完成之后 我们用ssh git@github.com 命令来连通一下github，如果你在response里面看到了你github账号名，那么就说明配置成功了。  let’s enjoy github ;)\n\ngitignore\n\n在本地仓库根目录创建 .gitignore 文件,可以github搜索gitignore，然后下载对应的文件丢到自己项目里即可。Win7 下不能直接创建，可以创建 “.gitignore.” 文件，后面的标点自动被忽略；\n1234.idea           过滤指定文件夹fd*            忽略根目录下的 fd 目录的全部内容；*.iml            过滤指定的所有文件!.gitignore      不忽略该文件\n","tags":["git","工具"],"path":"2017/11/21/Git操作/","external_link":""},{"title":"Linux服务器清理","date":"2018-09-13T16:00:00.000Z","content":"Why?\n废话不多说直接来图，可以看出磁盘已经快要满了\n\nWhat?\n可以看出mnt文件夹占用的最大，然后进入mnt目录里通过命令,根据文件大小对该路径下文件排序\n\ndu -h --max-depth=1\n我们服务器出现磁盘快满了的原因是因为，服务器部署了多个tomcat，然后tomcat系统日志忘记屏蔽了，时间一久，导致catalina.out记录的系统日志过多，然后文件就很大，最大的一个居然占了28G,找到了原因就解决吧\n\nHow?\n当然是删除文件了，但是删除之后通过命令查看当前路径各文件大小\n\ndu -sh *\n\n\n发现已经小了很多了，但是奇怪的是，通过df命令查看，空间并未清理出来\n\n\n通过查资料发现一个文件在文件系统中的存放分为两个部分：数据部分和指针部分，指针位于文件系统的meta-data中，数据被删除后，这个指针就从meta-data中清除了，而数据部分存储在磁盘中，数据对应的指针从meta-data中清除后，文件数据部分占用的空间就可以被覆盖并写入新的内容，之所以出现删除access_log文件后，空间还没释放，就是因为httpd进程还在一直向这个文件写入内容，导致虽然删除了access_log文件，但文件对应的指针部分由于进程锁定，并未从meta-data中清除，而由于指针并未被删除，那么系统内核就认为文件并未被删除，因此通过df命令查询空间并未释放也就不足为奇了。\n\n最简单粗暴的解决办法就是重启，当然如果你知道那个进程占用着呢也可以重启指定进程，我们是tomcat占用，然后重启tomcat，问题就解决啦\n\n谢谢观看，希望能帮到你\n","tags":["Linux清理","服务器","Centos 7"],"path":"2018/09/14/Linux服务器清理/","external_link":""},{"title":"ART与Dalvik","date":"2018-06-07T16:00:00.000Z","content":"Art上应用启动快，运行快，但是耗费更多存储空间，安装时间长，总的来说ART的功效就是&quot;空间换时间&quot;。\nART: Ahead of Time Dalvik: Just in Time\n什么是Dalvik：Dalvik是Google公司自己设计用于Android平台的Java虚拟机。Dalvik虚拟机是Google等厂商合作开发的Android移动设备平台的核心组成部分之一，它可以支持已转换为.dex(即Dalvik Executable)格式的Java应用程序的运行，.dex格式是专为Dalvik应用设计的一种压缩格式，适合内存和处理器速度有限的系统。Dalvik经过优化，允许在有限的内存中同时运行多个虚拟机的实例，并且每一个Dalvik应用作为独立的Linux进程执行。独立的进程可以防止在虚拟机崩溃的时候所有程序都被关闭。\n**什么是ART:**Android操作系统已经成熟，Google的Android团队开始将注意力转向一些底层组件，其中之一是负责应用程序运行的Dalvik运行时。Google开发者已经花了两年时间开发更快执行效率更高更省电的替代ART运行时。ART代表Android Runtime,其处理应用程序执行的方式完全不同于Dalvik，Dalvik是依靠一个Just-In-Time(JIT)编译器去解释字节码。开发者编译后的应用代码需要通过一个解释器在用户的设备上运行，这一机制并不高效，但让应用能更容易在不同硬件和架构上运行。ART则完全改变了这套做法，在应用安装的时候就预编译字节码到机器语言，这一机制叫Ahead-Of-Time(AOT)编译。在移除解释代码这一过程后，应用程序执行将更有效率，启动更快。\nART优点：\n\n系统性能的显著提升\n应用启动更快、运行更快、体验更流畅、触感反馈更及时\n更长的电池续航能力\n支持更低的硬件\n\nART缺点：\n\n更大的存储空间占用，可能会增加10%-20%\n更长的应用安装时间\n\n","tags":["ART","Dalvik"],"path":"2018/06/08/art与dalvik区别/","external_link":""},{"title":"丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast","date":"2016-11-03T16:00:00.000Z","content":"背景\n  在我们平时做demo，用系统自带的土司还可以。但是当我们在做项目的时候，如果还用系统再带的，那可能就有点low咯。所以让我们一起来打造好看的土司吧。\n## 效果图\n#### 哈哈 或许我设计的不是太美观，但是颜色样式位置你都可以自定义，相信你会设计出更好的来\n\n![](http:i.imgur.comKWzDSsD.png)\n## 代码实现\n#### 官方提供这些方法就是方便我们原来自定义Toast的下面我们来一起看看怎么利用这些方法打造好看的土司吧\n![](http:i.imgur.comMXutpcj.png)\n\n### 第一步 我们首先建一个用于包装系统土司的类，然后把我们需要修改的内容传给我们定义的土司，然后在调用系统土司的方法，最后显示。\n第二步 我们利用LayoutInflater来构造我们想要自定义的布局作为土司的布局，首先把我们定义的布局引入，并初始化控件\n\n第三步 我们要给土司设置显示的文字，也就是在之前初始化控件的时候我们自己写的那个textView，现在用我们自己定义的布局来显示要土司的内容，我们当然可以也写一个方法，方便下面我们的使用\n\n第四步 现在我们就正式的对系统的土司妹妹动手脚咯 嘿嘿~ 如果想修改我们自定义土司的位置，可以调用系统的这个方法来实现\n这里多说一下，这个方法包含四个参数，第一个是土司的显示位置，我设置的是显示在中间位置，第二个参数是在x轴的位置，正数表示往右，负数往左，第三个参数是y轴的位置，正数表示往下，负数往上。这个大家可以改下参数一试便知\n\n第五步 土司的显示时间，这个就简单多了，直接上代码了\n\n第六步 就是让土司显示了，如果不显示再好看的土司我们也看不到啊\n\n最后一步就是模仿土司的使用了，我是这样搞的，你怎么搞都行 当然可以在封装一层使之更简洁\n\n总结\n简单几步打造属于你自己的土司，是不是有点过于简单了呢，如果喜欢就在下面给我点赞哦，如果有那描述的不清晰的也欢迎给我留言问我哦。\n源码点我点我点我\n","tags":["Toast","UI"],"path":"2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/","external_link":""},{"title":"IPC的理解","date":"2017-05-08T16:00:00.000Z","content":"IPC\n\nInter-Process Communication的缩写。含义为进程间通信或跨进程通信，是指两个进程之间进行数据交换的过程。\n\n进程和线程的区别\n\n按照操作系统的描述，线程是CPU调度的最小单元，同时线程是一种有限的系统资源。\n进程一般指一个执行单元，在PC和移动设备上指一个程序或者一个应用。一个进程可以包含多个线程，因此进程和线程是包含与被包含的关系。\n\n多进程分为两种\n\n第一种情况是一个应用因为某些原因自身需要采用多线程模式来实现。\n另一种情况是当前应用需要向其他应用获取数据\n\nAndroid中的多进程模式\n通过给四大组件指定android:process属性，我们可以开启多线程模式\n\n进程名以&quot;:“开头的进程属于当前应用的私有进程，其他应用的组件不可以和它跑在同一进程，而进程名不以”:&quot;开头的进程属于全局进程，其他应用通过ShareUID方式可以和它跑在同一个进程中。\nAndroid系统会为每个应用分配一个唯一的UID,具有相同UID的应用才能共享数据，两个应用通过ShareUID跑在同一个进程中是有要求的，需要这两个应用有相同的ShareUID并且签名相同才可以。在这种情况下，它们可以互相访问对方的私有数据，比如data目录、组件信息等，不管它们是否跑在同一个进程中。当然如果它们跑在同一个进程中，那么除了能共享data目录、组件信息，还可以共享内存数据，或者说它们看起来就像是一个应用的两个部分。\n\n多进程模式的运行机制\n\nAndroid为每一个应用分配了一个独立的虚拟机，或者说为每个进程都分配了一个独立的虚拟机，不同的虚拟机在不同的内存分配上有不同的地址空间，这就导致在不同的虚拟机中访问同一个类的对象会产生多份副本。\n所有运行在不同进程中的四大组件，只要它们之间需要通过内存来共享数据，都会共享失败。\n\n一般来说，使用多进程会造成如下几个方面的问题：\n\n静态成员和单例模式完全失效\n线程同步机制完全失效\n\n不管是锁对象还是锁全局类都无法保证线程同步，因为不同进程锁的不是同一个对象\n\nSharedPreference的可靠性下降\n\nSharedPreferences不支持两个进程同时去执行写操作，否则会导致一定几率的数据丢失，这时因为SharedPreferences底层是通过读写XML文件来实现的，并发写显然是可能出问题的，甚至并发读写都有可能发生问题\n\nApplication会多次创建\n\n运行在同一个进程中的组件是属于同一个虚拟机和同一个Application的。同理，运行在不同进程中的组件是属于两个不同的虚拟机和Application的。\nIPC基础概念介绍\n\nSerializable\n\n是Java所提供的一个序列化接口，它是一个空接口，为对象提供标准的序列化和反序列化操作。使用Serializable来实现序列化相当简单，只需要在类的声明中指定一个类似下面的标识即可自动实现默认的序列化过程。\n12private static final long serialVersionUID = 8711368828010083044L\n通过Serializable方来实现对象的序列化，如下代码：\n1234567891011序列化过程User user = new User(0, &quot;jake&quot;, true);ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(&quot;cache.txt&quot;));out.writeObject(user);out.close();反序列化过程ObjectInputStream in = new ObjectInputStream(new FileInputStream(&quot;cache.txt&quot;));User newUser = (User)in.readObject();in.close();\n原则上序列化后的数据中的serialVersionUID只有和当前类的serialVersionUID相同时才能够正常的被反序列化。serialVersionUID的详细工作机制是这样的：序列化的时候系统会把当前类的serialVersionUID写入序列化的文件中（也可能是其他的中介），当反序列化的时候系统会去检测文件中的serialVersionUID，看它是否和当前类的serialVersionUID一致，如果一致就说明序列化的类的版本和当前类的版本是相同的，这个时候可以成功反序列化，否则就说明当前类和序列化的类相比发生了某些变换\n给serialVersionUID制定为1L或者采用Eclipse根据当前类结构去生成的hash值，这两者并没有本质区别。\n\n静态成员变量属于类不属于对象，所以不会参与序列化过程\n其次用transient关键字标记的成员变量不参与序列化过程\n\nParcelable接口\nParcelable也是一个接口，只要实现这个接口，一个类的对象就可以实现序列化并可以通过Intent的Binder传递\nParcelable的方法说明：\n\n\n\n方法\n功能\n标记位\n\n\n\n\ncreateFromParcel(Parcel in)\n从序列化的对象中创建原始对象\n\n\n\nnewArray[int size]\n创建指定长度的原始对象数组\n\n\n\nUser(Parcel in)\n从序列化的对象中创建原始对象\n\n\n\nwrite ToParcel(Parcel out, int flags)\n将当前对象写入序列化结构中，其中flags标识有两种值0或1（参见右侧标记位）。为1时标识当前对象需要作为返回值返回，不能立即释放资源，几乎所有情况都为0\nPARCELABLE_WRITE_RETURN_VALUE\n\n\ndescribeContents\n返回当前对象的内容描述。如果含有文件描述符，返回1（参见右侧标记位），否则返回0，几乎所有的情况都返回0\nCONTENTS_FILE_DESCRIPTOR\n\n\n\n\n系统已经为我们提供了许多实现了Parcelable接口的类，它们都是可以直接序列化的，比如Intent、Bundle、Bitmap等，同时List和Map也可以序列化，前提是它们里面的每个元素都是可序列化的。\n\n如何选取\nSerializable是Java中的序列化接口，其使用起来简单但是开销很大，序列化和反序列化需要大量IO操作。而Parceleble是Android中的序列化方式，因此更适合在Android平台上，缺点是麻烦，但是效率高，这是Android推荐的序列化方式，所以我们要首选Parcelable。Parcelable主要用在内存序列化上，通过Parcelable将对象序列化到存储设备中或者将对象序列化之后通过网络传输，但是过程稍显复杂，因此在这两种情况下建议大家使用Serializable。\nBinder\n\n继承了IBinder接口\nBinder是一种跨进程通信方式\n是ServiceManager连接各种Manager（ActivityManager,WindowManager等）和相应ManagerService的桥梁\n从Android应用层来说，Binder是客户端和服务端进行通信的媒介，当bindService的时候，服务器会返回一个包含了服务器端业务调用的Binder对象，通过这个Binder对象，客户端就可以获取服务端提供的服务或者是数据，这里的服务包含了普通服务和基于AIDL的服务\n\naidl工具根据aidl文件自动生成的java接口的解析：首先，它声明了几个接口方法，同时还声明了几个整型的id用于标识这些方法，id用于标识在transact过程中客户端所请求的到底是哪个方法；接着，它声明了一个内部类Stub，这个Stub就是一个Binder类，当客户端和服务端都位于同一个进程时，方法调用不会走跨进程的transact过程，而当两者位于不同进程时，方法调用需要走transact过程，这个逻辑由Stub内部的代理类Proxy来完成。\n所以，这个接口的核心就是它的内部类Stub和Stub内部的代理类Proxy。 下面分析其中的方法：\n\nasInterface(android.os.IBinder obj):用于将服务器端的Binder对象转化成客户端所需的AIDL接口类型的对象，这种转换过程是区分进程的，如果客户端和服务端是在同一进程中，那么这个方法返回的是服务端的Stub对象本身，否则返回的是系统封装的Stub.Proxy对象。\nasBinder:返回当前Binder对象\nonTransact：这个方法运行在服务端中的Binder线程池中，当客户端发起跨进程请求时，远程请求会通过系统底层封装后交由此方法来处理。\n这个方法的原型是public Boolean onTransact(int code, Parcelable data, Parcelable reply, int flags)\n服务端通过code可以知道客户端请求的目标方法，接着从data中取出所需的参数，然后执行目标方法，执行完毕之后，将结果写入到reply中。如果此方法返回false，说明客户端的请求失败，利用这个特性可以做权限验证(即验证是否有权限调用该服务)。\nProxy#[Method]：代理类中的接口方法，这些方法运行在客户端，当客户端远程调用此方法时，它的内部实现是：首先创建该方法所需要的参数，然后把方法的参数信息写入到_data中，接着调用transact方法来发起RPC请求，同时当前线程挂起；然后服务端的onTransact方法会被调用，直到RPC过程返回后，当前线程继续执行，并从_reply中取出RPC过程的返回结果，最后返回_reply中的数据。\n\n首先，当客户端发起远程请求时，由于当前线程会被挂起直至服务端进程返回数据，所以如果一个远程方法是很耗时的，那么不能在UI线程发起此远程请求；其次，由于服务端的Binder方法运行在Binder的线程池中，所以不管Binder是否耗时都应该采用同步的方式去实现，因为它已经运行在一个线程中了。\nBinder两种重要的方法\n\nlinkToDeath\nunlinkToDeath\nBinder运行在服务端，如果由于某种服务端异常终止了的话会导致客户端的远程调用失败、所以Binder提供了两个配对的方法linkToDeath和unlinkToDeath，通过linkToDeath方法可以给Binder设置一个死亡代理，当Binder死亡的时候客户端就会收到通知，然后就可以重新发起连接从而恢复连接了。\n\n如何给Binder设置死亡代理\n1、声明一个DeathRecipient对象、DeathRecipient是一个接口，其内部只有一个方法bindDied，实现这个方法就可以在Binder死亡的时候收到通知了。\n12345678910private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() &#123;    @Override    public void binderDied() &#123;        if (mRemoteBookManager == null) return;        mRemoteBookManager.asBinder().unlinkToDeath(mDeathRecipient, 0);        mRemoteBookManager = null;         TODO:这里重新绑定远程Service    &#125;&#125;;\n2、在客户端绑定远程服务成功之后，给binder设置死亡代理\n12mRemoteBookManager.asBinder().linkToDeath(mDeathRecipient, 0);\nAndroid的IPC方式\n1、 使用Bundle\nBundle实现了Parcelable接口，Activity、Service和Receiver都支持在Intent中传递Bundle数据\n2、 使用文件共享\n这种方式简单，适合在对数据同步要求不高的进程之间进行通信，并且要妥善处理并发读写的问题，SharedPreferences是一个特例，虽然它也是文件的一种，但是由于系统对它的读写有一定的缓存策略，即在内存中会有一份SharedPreferences文件的缓存，因此在多进程模式下、系统对它的读写就变的不可靠，当面对高并发读写访问的时候，有很大几率会丢失，因此，不建议在进程间通信中使用SharedPreferences。\n3、 使用Messenger\nMessenger是一种轻量级的IPC方案，它的底层实现就是AIDL。Messenger是以串行的方式处理请求的，即服务端只能一个个处理，不存在并发执行的情形。\n4、 使用AIDL\n大致流程：首先建一个Service和一个AIDL接口，接着创建一个类继承自AIDL接口中的Stub类中的抽象方法，在Service的onBind方法中返回这个类的对象，然后客户端就可以绑定服务端Service，建立连接后就可以访问远程服务端的方法了。\n1.AIDL支持的数据类型：基本数据类型、String和CharSequence、ArrayList、HashMap、Parcelable以及AIDL；\n2.某些类即使和AIDL文件在同一个包中也要显式import进来；\n3.AIDL中除了基本数据类，其他类型的参数都要标上方向：in、out或者inout；\n4.AIDL接口中支持方法，不支持声明静态变量；\n5.为了方便AIDL的开发，建议把所有和AIDL相关的类和文件全部放入同一个包中，这样做的好处是，当客户端是另一个应用的时候，可以直接把整个包复制到客户端工程中。\n6.RemoteCallbackList是系统专门提供的用于删除跨进程Listener的接口。RemoteCallbackList是一个泛型，支持管理任意的AIDL接口，因为所有的AIDL接口都继承自IInterface接口。\n5、使用ContentProvider\n1.ContentProvider主要以表格的形式来组织数据，并且可以包含多个表；\n2.ContentProvider还支持文件数据，比如图片、视频等，系统提供的MediaStore就是文件类型的ContentProvider；\n3.ContentProvider对底层的数据存储方式没有任何要求，可以是SQLite、文件，甚至是内存中的一个对象都行；\n4.要观察ContentProvider中的数据变化情况，可以通过ContentResolver的registerContentObserver方法来注册观察者；\n6、使用Socket\n套接字，分为流式套接字和用户数据报套接字两种，分别对应于网络的传输控制层中TCP和UDP协议。\n\nTCP协议是面向连接的协议，提供稳定的双向通信功能，TCP连接的建立需要经过&quot;三次握手&quot;才能完成，为了提供稳定的数据传输功能，其本身提供了超时重传功能，因此具有很高的稳定性\nUDP是无连接的，提供不稳定的单向通信功能，当然UDP也可以实现双向通信功能，在性能上，UDP具有更好的效率，其缺点是不保证数据能够正确传输，尤其是在网络拥塞的情况下。\n\nBinder连接池\n\n当项目规模很大的时候，创建很多个Service是不对的做法，因为service是系统资源，太多的service会使得应用看起来很重，所以最好是将所有的AIDL放在同一个Service中去管理。整个工作机制是：每个业务模块创建自己的AIDL接口并实现此接口，这个时候不同业务模块之间是不能有耦合的，所有实现细节我们要单独开来，然后向服务端提供自己的唯一标识和其对应的Binder对象；对于服务端来说，只需要一个Service，服务端提供一个queryBinder接口，这个接口能够根据业务模块的特征来返回相应的Binder对象给它们，不同的业务模块拿到所需的Binder对象后就可以进行远程方法调用了。\nBinder连接池的主要作用就是将每个业务模块的Binder请求统一转发到远程Service去执行，从而避免了重复创建Service的过程。\n建议在AIDL开发工作中引入BinderPool机制。\n\n选用合适的IPC方式\n\n","tags":["IPC","《Android开发艺术探索》","读书笔记"],"path":"2017/05/09/《Android开发艺术探索》第二章笔记/","external_link":""},{"title":"仿QQ邮箱加载动画","date":"2018-09-19T16:00:00.000Z","content":"效果图\n\n代码实现\n**\n * 创建时间: 2018920\n *\n * @author Liuzj\n * @description 仿QQ邮箱下拉刷新动画\n *\npublic class LoadingView extends View {\n\n    **\n     * 小球数\n     *\n    private List&lt;Paint&gt; mPaints;\n\n    **\n     * 默认小球数\n     *\n    private static int DEFAULT_NUM = 3;\n\n    **\n     * 小球画笔\n     *\n    private Paint mPaint;\n    **\n     * 默认小球半径\n     *\n    private float defaultRadius = 12f;\n    **\n     * 默认小球颜色\n     *\n    private int[] ballColors = {Color.RED, Color.YELLOW, Color.BLUE};\n\n    **\n     * 小球起点位置\n     *\n    private float x = -80f;\n    ;\n\n    public LoadingView(Context context) {\n        super(context);\n        init();\n    }\n\n    public LoadingView(Context context, @Nullable AttributeSet attrs) {\n        super(context, attrs);\n        init();\n    }\n\n    public LoadingView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {\n        super(context, attrs, defStyleAttr);\n        init();\n    }\n\n\n    private void init() {\n        mPaints = new ArrayList&lt;&gt;();\n        for (int i = 0; i &lt; DEFAULT_NUM; i++) {\n            mPaint = new Paint();\n            mPaint.setColor(ballColors[i]);\n            mPaints.add(mPaint);\n        }\n    }\n\n    @Override\n    protected void onDraw(Canvas canvas) {\n        super.onDraw(canvas);\n        for (int i = 0; i &lt; mPaints.size(); i++) {\n            控制小球在80和-80之间运动\n            x += 40f;\n            if (x == 80f) {\n                x = -80f;\n            }\n            控制小球大小在12至16之间徘徊\n            defaultRadius += 2f;\n            if (defaultRadius &gt; 16f) {\n                defaultRadius = 12f;\n            }\n            canvas.drawCircle(getWidth()  2 + x, getHeight()  2, defaultRadius, mPaints.get(i));\n        }\n        postInvalidateDelayed(250);\n    }\n}\n\n后续\n先初步实现效果后续再完善吧，谢谢观看\n","tags":["自定义View"],"path":"2018/09/20/仿QQ邮箱加载动画/","external_link":""},{"title":"如何让程序返回桌面后，重新进入时不加载启动页。","date":"2017-04-09T16:00:00.000Z","content":"因为我也是才踩完这个坑，所以就把我的解决方案放在这里了，如果有更好的解决方案，欢迎在下面给我留言。好了废话不多说了，下面就是我的解决方案\n在启动页的onCreate()方法中super.onCreate(savedInstanceState);之后加入这段代码\n\tif (!this.isTaskRoot()) {判断Activity是不是任务空间的源Activity，&quot;非&quot;也就是说是被系统重新实例化出来\n\t\tIntent mainIntent = getIntent();\n\t\tString action = mainIntent.getAction();\n\t\tif (mainIntent.hasCategory(Intent.CATEGORY_LAUNCHER) &amp;&amp; action.equals(Intent.ACTION_MAIN)) {\n\t\t\tfinish();\n\t\t\treturn;finish之后改Activity活动会继续执行后面的二代马，你可以logCat验证，加return避免抛Exception\n\t\t}\n\t}\n","tags":["Activity"],"path":"2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/","external_link":""},{"title":"仿QQ好友点赞效果，属性动画+贝塞尔曲线实现","date":"2018-05-08T16:00:00.000Z","content":"前言\n属性动画 和 贝赛尔曲线 已经出来很久了，很多前辈写了很多不错的文章，在此不得不感谢这些前辈无私奉献的开源精神，能让我们站在巨人的肩膀上望得更远.如果你对属性动画还不太了解可以看看郭林的文章，贝塞尔曲线的使用可以参考Lin_Zero\n效果图\n\n实现思路\n整体实现思路还是比较简单的，首先要有一个容器来装点出来的赞，然后通过属性动画对赞加一些动画效果，最后通过贝塞尔曲线使其做不规则的运动。\n代码实现\n好了，思路有了，咱们也废话不多说，直接上代码，首先是所有动画的实现\n1234567891011121314151617181920212223242526272829303132333435363738** *  实现点赞效果 平移 缩放 渐变 * @param imageView * @return 所有动画的集合 *private AnimatorSet getAnimator(final ImageView imageView) &#123;    缩放    ObjectAnimator scaleX = ObjectAnimator.ofFloat(imageView,&quot;scaleX&quot;,0.4f,1f);    ObjectAnimator scaleY = ObjectAnimator.ofFloat(imageView,&quot;scaleY&quot;,0.4f,1f);    alpha    ObjectAnimator alpha = ObjectAnimator.ofFloat(imageView,&quot;alpha&quot;,0.4f,1f);    执行三个动画    AnimatorSet enterSet = new AnimatorSet();    enterSet.setDuration(500);    enterSet.playTogether(scaleX,scaleY,alpha);    用贝塞尔曲线控制点赞的走向    ValueAnimator bezierAnimator = getBezierAnimator(imageView);    综合所有动画    AnimatorSet set = new AnimatorSet();    按顺序执行    set.playSequentially(enterSet,bezierAnimator);    添加插值器    set.setInterpolator(interpolators[random.nextInt(3)]);    set.setTarget(imageView);    set.addListener(new AnimatorListenerAdapter() &#123;        @Override        public void onAnimationEnd(Animator animation) &#123;            super.onAnimationEnd(animation);            removeView(imageView);        &#125;    &#125;);    return set;&#125;\n然后是通过贝塞尔曲线对赞的走向做了控制，代码如下\n1234567891011121314151617181920212223242526272829** * 通过贝塞尔曲线对赞走向做控制 * @param imageView * @return *private ValueAnimator getBezierAnimator(final ImageView imageView) &#123;    准备控制贝塞尔曲线的四个点（起始点p0,拐点p1,拐点p2,终点p3）    PointF pointF0 = new PointF((mWidth-dWidth)2,mHeight-dHeight);    PointF pointF1 = getTogglePointF(1);    PointF pointF2 = getTogglePointF(2);    PointF pointF3 = new PointF(random.nextInt(mWidth),0);    BezierEvaluator bezierEvaluator = new BezierEvaluator(pointF1,pointF2);    final ValueAnimator animator = ValueAnimator.ofObject(bezierEvaluator,pointF0,pointF3);    animator.setDuration(3000);    animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() &#123;        @Override        public void onAnimationUpdate(ValueAnimator valueAnimator) &#123;            PointF pointF = (PointF) valueAnimator.getAnimatedValue();            控制属性变化            imageView.setX(pointF.x);            imageView.setY(pointF.y);            imageView.setAlpha(1 - valueAnimator.getAnimatedFraction());从可见到不可见        &#125;    &#125;);    return animator;&#125;\n这是估值器的实现\n123456789101112131415161718192021222324252627282930313233** * 创建时间: 2018510 * * @author Liuzj * 功能描述: 贝塞尔曲线估值器 *public class BezierEvaluator implements TypeEvaluator&lt;PointF&gt; &#123;    **     * 拐点     *    private PointF pointF1;    private PointF pointF2;    public BezierEvaluator(PointF pointF1,PointF pointF2) &#123;        this.pointF1 = pointF1;        this.pointF2 = pointF2;    &#125;    @Override    public PointF evaluate(float v, PointF pointF, PointF t1) &#123;        PointF point = new PointF();        point.x = pointF.x*(1-v)*(1-v)*(1-v)                +3*pointF1.x*v*(1-v)* (1-v)                +3*pointF2.x*v*v*(1-v)                +t1.x*v*v*v;        point.y = pointF.y*(1-v)*(1-v)*(1-v)                +3*pointF1.y*v*(1-v)* (1-v)                +3*pointF2.y*v*v*(1-v)                +t1.y*v*v*v;        return point;    &#125;&#125;\n可能有的朋友对evaluate方法里的实现有所疑惑，其实调用贝塞尔的三阶公式,然后把点跟公式里的对应上就ok了\n\nEND！\nThanks\n本项目源码\n","tags":["属性动画","贝赛尔曲线"],"path":"2018/05/09/仿QQ好友点赞效果，属性动画+贝塞尔曲线实现/","external_link":""},{"title":"仿微信聊天列表之RecyclerView多布局","date":"2016-10-07T16:00:00.000Z","content":"最近在做关于聊天的项目，需要用到RecyclerView多布局，然而在网上却没有比较详细的讲解，于是萌生了自己写一篇的念头，可能写的不好，不喜勿喷。转载请标明出处，原创不易\n\n效果图\n不废话直接先上效果图:\n\n![](http:i.imgur.comQX4yN3o.png)\n\n### 代码\n##### 既然说到RecyclerView，那就不能不提RecyclerViewAdapter，首先我们要有一个类继承RecyclerView.Adapter,有三个必须重写的方法：\n\n![](http:i.imgur.commW2FKXj.png)\n###### 1、onCreateViewHolder(ViewGroup parent, int viewType)，这个方法的作用判断选择哪个布局，有两个参数，第一个是viewHolder的容器，第二个参数相当于一个标识，根据标识可以绑定具体的ViewHolder。\n\n![](http:i.imgur.comtndXCLy.png)\n###### 2、onBindViewHolder(final RecyclerView.ViewHolder holder, int position)，根据方法名，我们就可以大概知道他是绑定布局的，同样有两个参数，position是当前那一行所在的位置，来看代码\n\n![](http:i.imgur.com9PHj7Dw.png)\n\n既然能绑定指定的item，当然就能给指定的item设置点击事件了，我设置的点击事件是，点击吐司当前的position，长按删除当前item。\n##### 3、getItemCount()，这个方法比较简单，绑定RecyclerView Item的数量\n\n![](http:i.imgur.comhbbMjNo.png)\n##### 4、要实现绑定多布局最关键的方法啦，getItemViewType(int position)，一个参数，根据当前的position指向指定布局，也就是为onCreateViewHolder方法提供第二个参数。\n\n![](http:i.imgur.comjRfI3Ui.png)\n\n##### 5、然后再来看先下ViewHolder和点击事件是怎么写的吧\n\n![](http:i.imgur.comFfRQNkN.png)\n\n##### 6、最后再来看看Activity是实现的吧\n![](http:i.imgur.comkBePtu7.png)\n\n这里简单的说明一下，楼主用到了ButterKnife注解库，如果你没用过，那么完全没关系，用到的控件findviewbyid一下就好啦，不过这个注解库确实挺强大的，推荐学习下，网上有好多教程的，如果还不会，给我留言我可以教你。哈哈，不能说教，共同进步，共同进步…\nEnd\n楼主也是才接触RecyclerView控件不久，也是菜鸟一名，可能理解的不是很透彻，哪里写的不对或有什么问题欢迎在下面给我评论，喜欢的话给我点赞哦。\n\n本文源码，点我点我…\n","tags":["RecyclerView","聊天列表"],"path":"2016/10/08/仿微信聊天列表之RecyclerView多布局/","external_link":""},{"title":"程序设计的6大原则","date":"2018-12-03T16:00:00.000Z","content":"单一职责原则\n\n所谓职责是指类变化的原因。如果一个类有多于一个的动机被改变，那么这个类就具有多于一个的职责。而单一职责原则就是指一个类或者模块应该有且只有一个改变的原因。\n一个类，只有一个引起它变化的原因。应该只有一个职责。每一个职责都是变化的一个轴线，如果一个类有一个以上的职责，这些职责就耦合在了一起。这会导致脆弱的设计。当一个职责发生变化时，可能会影响其它的职责。另外，多个职责耦合在一起，会影响复用性。例如：要实现逻辑和界面的分离。\n此原则的核心就是高内聚低耦合。\n\n里氏替换原则\n\n里氏替换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏替换原则中说，任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。\n派生类（子类）对象可以在程式中代替其基类（超类）对象。\n\n依赖倒置原则\n\n依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。 简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。\n高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。\n抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。\n\n接口隔离原则\n\n使用多个专门的接口比使用单一的总接口要好。\n一个类对另外一个类的依赖性应当是建立在最小的接口上的。\n一个接口代表一个角色，不应当将不同的角色都交给一个接口。没有关系的接口合并在一起，形成一个臃肿的大接口，这是对角色和接口的污染。\n“不应该强迫客户依赖于它们不用的方法。接口属于客户，不属于它所在的类层次结构。”这个说得很明白了，再通俗点说，不要强迫客户使用它们不用的方法，如果强迫用户使用它们不使用的方法，那么这些客户就会面临由于这些不使用的方法的改变所带来的改变。\n\n迪米特法则\n\n迪米特法则可以简单说成：talk only to your immediate friends。 对于OOD来说，又被解释为下面几种方式：一个软件实体应当尽可能少的与其他实体发生相互作用。每一个软件单位对其他的单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。\n迪米特法则的初衷在于降低类之间的耦合。由于每个类尽量减少对其他类的依赖，因此，很容易使得系统的功能模块功能独立，相互之间不存在（或很少有）依赖关系。\n迪米特法则不希望类之间建立直接的联系。如果真的有需要建立联系，也希望能通过它的友元类来转达。因此，应用迪米特法则有可能造成的一个后果就是：系统中存在大量的中介类，这些类之所以存在完全是为了传递类之间的相互调用关系——这在一定程度上增加了系统的复杂度。\n有兴趣可以研究一下设计模式的门面模式（Facade）和中介模式（Mediator），都是迪米特法则应用的例子。\n\n开闭原则\n\n开闭原则中“开”，是指对于组件功能的扩展是开放的，是允许对其进行功能扩展的。\n开闭原则中“闭”，是指对于原有代码的修改是封闭的，即修改原有的代码对外部的使用是透明的。\n在面向对象编程领域中，开闭原则规定“软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但是对于修改是封闭的”，这意味着一个实体是允许在不改变它的源代码的前提下变更它的行为。该特性在产品化的环境中是特别有价值的，在这种环境中，改变源代码需要代码审查，单元测试以及诸如此类的用以确保产品使用质量的过程。遵循这种原则的代码在扩展时并不发生改变，因此无需上述的过程。\n\n以上内容均来自百度百科及维基百科，感谢观看\n","tags":["六大原则","设计模式"],"path":"2018/12/04/程序设计的6大原则/","external_link":""},{"title":"《肖申克的救赎》观后感","date":"2019-01-30T16:00:00.000Z","content":"\n  Hope is a good thing, maybe the best of things and no good thing ever dies.（希望是美好的，也许是人间至善，而美好的事物永不消逝）\n\n  一直听朋友说这个片子很好， 但是一直没时间看， 今天认真看了。\n  这是一部成功的电影，不管你承认还是不承认。它没有绚丽的场景，华丽的特效，它场景厚朴， 画面质朴，演员淳朴，但它情节紧凑，跌宕起伏，演出自然。 整部剧没有围绕主角安迪展开，而是通过瑞德的视角把安迪带入漫长的监狱生活中。但不同的是安迪始终心怀希望，面对被体制化的肖申克，安迪仿佛是一缕光。 瑞德说的一段话我印象很深刻：“刚入狱的时候，你痛恨周围的高墙，慢慢地，你习惯了生活在其中，最终你发现，自己不得不依靠它而生存。”，布鲁克和鸽子的故事更是体现出体制化对人的伤害。\n  整部剧中我印象最深的就是体制化这个词，剧中的人被肖申克体制化，鸽子和囚犯布鲁克的故事听后叫人毛骨悚然。一个囚犯入狱时养了一只鸽子，放风时老爱带着鸽子在运动场的一个角落晃来晃去，8年后，他刑满释放，出狱的前一天他放飞了养了8年的鸽子，鸽子立刻姿态漂亮地飞走了，可是，一个星期后，安迪在运动场的那个角落又看到了那只鸽子，鸽子像粪土一样躺在那里，鸽子已经被监狱的生活制度化了，运动场的角落成了它全部的生存空间，放飞后它又回到那里，没有无人喂养的鸽子活活饿死在那个地方。还有囚犯布鲁克，他在肖申克监狱呆了几十年，肖申克已经变成了他的整个世界，在布鲁克眼中，墙外的世界实在太可怕了，他不知道出去以后怎样生活，当他获得假释时，他一手拿着假释文件，一手拿着汽车车票，边走边哭，不到一年就死于贫苦老人之家。肖申克出来的每一个人都变成了行尸走肉，更别奢谈什么保持人性了。\n\n  I guess it comes down to a simple choice: get busy living or get busy dying.（生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。）\n\n  Get busy living, or get busy dying ，我们现在是不是也正活在一个无形的“肖申克”中呢？是不是也在被逐渐体制化呢？我们在忙着活和忙着死的抉择中应该怎样去选择自己的生活呢？我想答案不用我说了。如何忙着活呢，安迪给了我们一个很好的例子，掌握好自己的专业技能，心存目标，坚持不懈，然后干就完了。\n\n  Some birds aren’t meant to be caged. Their feathers are just too bright. And when they fly away，the part of you that knows it was a sin to lock them up does rejoice.（有的鸟毕竟是关不住的，他们的羽翼太光辉了，当他们飞走，你会由衷庆贺他获得自由。）\n\n","tags":["观后感","《肖申克的救赎》"],"path":"2019/01/31/肖申克的救赎/","external_link":""},{"title":"手机连接电脑不读手机的终极解决方案","date":"2017-05-02T16:00:00.000Z","content":"解决方案\n\n首先在开发者选项里面把USB设置关闭\n没有开发者选项的自己百度\n关闭USB选项后，重新用数据线连接电脑\n如果还说无法识别的USB设备，请重新用数据线连接电脑，基本两三次就会成功\n如果你是开发者的话，再去打开USB设备就可以调试手机了\n\n\n\n今天遇到的这个奇葩问题的解决方案，特意记录下，希望不要让更多人在这个问题上耽误时间了\n\n","tags":["解决方案","Android开发"],"path":"2017/05/03/手机连接电脑不读手机的终极解决方案/","external_link":""},{"title":"还在为右键没有Svn菜单发愁？简单几步给你变出来","date":"2016-10-08T16:00:00.000Z","content":"右键没有SVN菜单？简单几步把菜单给你变出来\n1、按住Ctrl + Shift + Esc , 选到“进程”栏；\n\n![](http:i.imgur.commHcbmCM.png)\n\n### 2、找到explorer.exe，结束它；\n\n![](http:i.imgur.comHBf2i1g.png)\n\n### 3、点击左上角的“文件”，选新建任务\n\n![](http:i.imgur.comrmbh5Hd.png)\n\n### 4、在弹出来的输入框中输入explorer，也就是我们刚才结束的那个进程\n\n![](http:i.imgur.comao56lQh.png)\n\n### 5、点击确定，返回桌面，点击右键，看！是不是出来了，哈哈\n\n![](http:i.imgur.comKg9gOvh.png)\n\n### 教程到此结束，简单几步是不是把svn菜单变出来了，哈哈，希望能帮到你，谢谢浏览","tags":["SVN遇到的问题"],"path":"2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/","external_link":""},{"title":"项目合并","date":"2018-10-13T16:00:00.000Z","content":"遇到这个任务 请务必静下心\n遇到这个任务 请务必静下心\n遇到这个任务 请务必静下心\n命令行查看更多错误信息\n编译时打印详细信息\ngradle build --info\ngradle build --stacktrace\n\n当然也能这么用\ngradle build --stacktrace --info\n\n运行时\ngradle assembledebug --stacktrace --info\n\n错误一、Program type already present\n这类问题出现得原因大多都是引用的第三方依赖重复，遇到这类问题需要别烦躁，细心找出重复得依赖删除即可消除这类问题，这里提供一种方式\n\n错误二、More than one file was found with OS independent path\nandroid {\n   ---\n   packagingOptions {\n        pickFirst libx86_64替换成你错误中.so\n        pickFirst libarmeabi替换成你错误中.so\n        pickFirst libx86替换成你错误中.so\n        pickFirst libarmeabi-v7a替换成你错误中.so\n        pickFirst libarm64-v8a替换成你错误中.so\n    }\n   ---\n}\n\n错误三、aapt error\n在gradle.properties中加入下面这行代码，处理了我的这个问题\nandroid.enableAapt2=true\n\n错误四、finished with non-zero exit value 1\n敲命令，找带error的错误，然后处理\ngradlew processDebugResources --debug\n\n\n最后目前遇到这些问题，在遇到在更新\n","tags":["项目合并","踩坑"],"path":"2018/10/14/项目合并/","external_link":""},{"title":"华为EMUI打不开app解决方案","date":"2018-07-27T16:00:00.000Z","content":"1、如果Manifest中有给Activity设置这个属性\n\nandroid:screenOrientation=“portrait”\n\n删除掉这条属性，改用在代码中设置\n\nsetRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);\n\n2、如果在主题中有用到这条属性，也请删除，即可解决问题\n\n&lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;item&gt;\n\n","tags":["解决方案","Bug"],"path":"2018/07/28/华为8.0bug/","external_link":""}]';
+
+	s = s.replace(/\\n/g, "\\n")
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f")
+
+// remove non-printable and other non-valid JSON chars
+	s = s.replace(/[\u0000-\u0019]+/g,"");
+	var list = JSON.parse(s);
+	var fuse = new Fuse(list, options);
+	var el = document.getElementById('search-form');
+	var newBox = $('.Card-archive').first().clone();
+	el.oninput = function(event){
+		var searchText = el.value;
+		var result = fuse.search(searchText);
+		$('.archive-cards .Card-archive').remove();
+		for(var i in result){
+			var anotherBox = newBox.clone();
+			var dateStr = new Date(result[i].date);
+			anotherBox.css('display','flex');
+			var url = "";
+			if(result[i].external_link !== ""){
+				url = result[i].external_link;
+			}else{
+				url = '/' + result[i].path;
+			}
+
+			anotherBox.find('.Card-title a').text(result[i].title).attr('href', url);
+			anotherBox.find('.Card-date').text(dateStr.toDateString());
+			anotherBox.appendTo('.archive-cards');
+		}
+	}
+</script>
+
+<div class='tagcloud-container'>
+<div class='tag-cloud'>
+	<a href="/tags/ART/" style="font-size: 0.8em; color: #488baf">ART</a> <a href="/tags/Activity/" style="font-size: 2em; color: #d63e0a">Activity</a> <a href="/tags/Android-开发/" style="font-size: 0.8em; color: #488baf">Android 开发</a> <a href="/tags/Android开发/" style="font-size: 0.8em; color: #488baf">Android开发</a> <a href="/tags/Bug/" style="font-size: 0.8em; color: #488baf">Bug</a> <a href="/tags/Centos-7/" style="font-size: 0.8em; color: #488baf">Centos 7</a> <a href="/tags/Dalvik/" style="font-size: 0.8em; color: #488baf">Dalvik</a> <a href="/tags/EventBus/" style="font-size: 0.8em; color: #488baf">EventBus</a> <a href="/tags/IPC/" style="font-size: 0.8em; color: #488baf">IPC</a> <a href="/tags/Linux清理/" style="font-size: 0.8em; color: #488baf">Linux清理</a> <a href="/tags/RecyclerView/" style="font-size: 0.8em; color: #488baf">RecyclerView</a> <a href="/tags/SVN/" style="font-size: 0.8em; color: #488baf">SVN</a> <a href="/tags/SVN遇到的问题/" style="font-size: 0.8em; color: #488baf">SVN遇到的问题</a> <a href="/tags/Toast/" style="font-size: 0.8em; color: #488baf">Toast</a> <a href="/tags/UI/" style="font-size: 0.8em; color: #488baf">UI</a> <a href="/tags/Wifi调试/" style="font-size: 0.8em; color: #488baf">Wifi调试</a> <a href="/tags/git/" style="font-size: 0.8em; color: #488baf">git</a> <a href="/tags/《Android开发艺术探索》/" style="font-size: 0.8em; color: #488baf">《Android开发艺术探索》</a> <a href="/tags/《肖申克的救赎》/" style="font-size: 0.8em; color: #488baf">《肖申克的救赎》</a> <a href="/tags/使用手册/" style="font-size: 0.8em; color: #488baf">使用手册</a> <a href="/tags/六大原则/" style="font-size: 0.8em; color: #488baf">六大原则</a> <a href="/tags/四大组件/" style="font-size: 0.8em; color: #488baf">四大组件</a> <a href="/tags/属性动画/" style="font-size: 0.8em; color: #488baf">属性动画</a> <a href="/tags/工具/" style="font-size: 0.8em; color: #488baf">工具</a> <a href="/tags/年终总结/" style="font-size: 0.8em; color: #488baf">年终总结</a> <a href="/tags/服务器/" style="font-size: 0.8em; color: #488baf">服务器</a> <a href="/tags/目标/" style="font-size: 0.8em; color: #488baf">目标</a> <a href="/tags/聊天列表/" style="font-size: 0.8em; color: #488baf">聊天列表</a> <a href="/tags/自定义View/" style="font-size: 0.8em; color: #488baf">自定义View</a> <a href="/tags/观后感/" style="font-size: 0.8em; color: #488baf">观后感</a> <a href="/tags/解决方案/" style="font-size: 2em; color: #d63e0a">解决方案</a> <a href="/tags/设计模式/" style="font-size: 0.8em; color: #488baf">设计模式</a> <a href="/tags/读书笔记/" style="font-size: 0.8em; color: #488baf">读书笔记</a> <a href="/tags/贝赛尔曲线/" style="font-size: 0.8em; color: #488baf">贝赛尔曲线</a> <a href="/tags/踩坑/" style="font-size: 0.8em; color: #488baf">踩坑</a> <a href="/tags/项目合并/" style="font-size: 0.8em; color: #488baf">项目合并</a>
+</div>
+</div>
+
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">Zijian Liu </a> @ 2021</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/Liuzjdev' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'tBcysyoj9731OUF5uYiySi1A-gzGzoHsz',
+        appKey: '9Y8T0FcYUEurAkpRRfii3G2V',
+        placeholder: '元芳，你怎么看',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+</script>
+
+
+    
+<script type='text/javascript'>
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

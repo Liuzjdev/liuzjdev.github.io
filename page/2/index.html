@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Liuzj的博客</title>
+  
+
+  
+  
+  <meta name="description" content="Android developer">
+  <meta name="author" content="Zijian Liu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-38342303-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/avatar.png' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Liuzj的博客</a>
+			</h1>
+			<subtitle>
+				思考一切
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      
+
+
+<div class="index-container" id='/page/2/index.html' data-name='index' data-version='2.1.4'>
+	<div class='index-intro'>
+		一块石头就可以改变河流的方向
+	</div>
+	
+		<div class="grid-2_md-1 grid-equalHeight index-cards">
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-1' id='hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741' data-name='IPC的理解' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2017/05/09/《Android开发艺术探索》第二章笔记/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/e8e102554ebe528a4539402fc92c8ecccecd349b6f9b6ecda9bc6942f67c93f0.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2017/05/09/《Android开发艺术探索》第二章笔记/">
+				
+				IPC的理解</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2017/05/09/《Android开发艺术探索》第二章笔记/">
+				
+				
+				
+				IPC
+
+Inter-Process...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> May 9, 2017
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2017/05/09/《Android开发艺术探索》第二章笔记/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-2' id='hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970' data-name='手机连接电脑不读手机的终极解决方案' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2017/05/03/手机连接电脑不读手机的终极解决方案/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/4be2391050000053473be4dbefc322e35515a33da82e9ce53dacbfb42e09f18d.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2017/05/03/手机连接电脑不读手机的终极解决方案/">
+				
+				手机连接电脑不读手机的终极解决方案</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2017/05/03/手机连接电脑不读手机的终极解决方案/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> May 3, 2017
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2017/05/03/手机连接电脑不读手机的终极解决方案/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-3' id='hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc' data-name='如何让程序返回桌面后，重新进入时不加载启动页。' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/d5539cfa6b19a95f29b9335dca633417329b4d3ae0aebdeda2701dc18914e4f9.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/">
+				
+				如何让程序返回桌面后，重新进入时不加载启动页。</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/">
+				
+				
+				
+				因为我也是才踩完这个坑，所以就把我的解决方案放在这里了，如果有更好的解决方案，欢迎在下面给我留言。好了废话不多说了，下面就是我的解决方案
+在启动页的onCreate()方法中super.onCreate(savedInstanceState);之后加入这段代码
+	if...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Apr 10, 2017
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-4' id='hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51' data-name='EventBus使用笔记' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2017/03/02/EventBus使用笔记/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/cdcc0ee7bda3da34650b7d01426a608c87cb4bebe15eeb96ac10683202dc7697.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2017/03/02/EventBus使用笔记/">
+				
+				EventBus使用笔记</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2017/03/02/EventBus使用笔记/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Mar 2, 2017
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2017/03/02/EventBus使用笔记/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-5' id='hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52' data-name='Android开发配置wifi调试教程' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/12/18/Android开发配置wifi调试教程/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/2fc7dd99b67230b3e31b7f3e848a10fbd721f02079edf37941f580f6b96afa07.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/12/18/Android开发配置wifi调试教程/">
+				
+				Android开发配置wifi调试教程</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/12/18/Android开发配置wifi调试教程/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Dec 18, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/12/18/Android开发配置wifi调试教程/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-6' id='hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4' data-name='丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/806d6c47d81f39cf4401d30017f00220217c7c0162ef326f0f70097ef6cf05fb.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/">
+				
+				丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/">
+				
+				
+				
+				背景
+  在我们平时做demo，用系统自带的土司还可以。但是当我们在做项目的时候，如果还用系统再带的，那可能就有点low咯。所以让我们一起来打造好看的土司吧。
+## 效果图
+#### 哈哈...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Nov 4, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-7' id='hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9' data-name='还在为右键没有Svn菜单发愁？简单几步给你变出来' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/9335ac27d635983c55e0660b53dde69630a8e64f18c800d221574a61ae4bc738.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/">
+				
+				还在为右键没有Svn菜单发愁？简单几步给你变出来</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/">
+				
+				
+				
+				右键没有SVN菜单？简单几步把菜单给你变出来
+1、按住Ctrl + Shift + Esc , 选到“进程”栏；
+
+![](http://i.imgur.com/mHcbmCM.png)
+
+###...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Oct 9, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-8' id='hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a' data-name='仿微信聊天列表之RecyclerView多布局' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/10/08/仿微信聊天列表之RecyclerView多布局/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/7ac854a5517d5d762055a1800e5790c70f9419fee5503e26faa424e5cdf65ae7.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/10/08/仿微信聊天列表之RecyclerView多布局/">
+				
+				仿微信聊天列表之RecyclerView多布局</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/10/08/仿微信聊天列表之RecyclerView多布局/">
+				
+				
+				
+				最近在做关于聊天的项目，需要用到RecyclerView多布局，然而在网上却没有比较详细的讲解，于是萌生了自己写一篇的念头，可能写的不好，不喜勿喷。转载请标明出处，原创不易
+
+效果图
+不废话直接先上效果图:
+
+![](http://i.imgur.com/QX4yN3o.png)
+
+###...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Oct 8, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/10/08/仿微信聊天列表之RecyclerView多布局/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-9' id='hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba' data-name='Android Studio SVN使用手册' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/09/06/Android Studio SVN使用手册/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/9eb24f9b31d394b2a6a8a2381b351fa70301f13b5400322cdf9affd542273ee2.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/09/06/Android Studio SVN使用手册/">
+				
+				Android Studio SVN使用手册</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/09/06/Android Studio SVN使用手册/">
+				
+				
+				
+				Android Studio 配置及使用：
+
+下载客户端：下载地址:http://tortoisesvn.net/downloads.html
+
+安装配置：这个需要自己独立安装带有 command line 功能的 SVN 客户端，据说 1.7 之后开始支持 command line...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> Sep 6, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/09/06/Android Studio SVN使用手册/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-10' id='hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194' data-name='Activity总结' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2016/05/08/Activity总结/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/75e2d04c2ed84cac2116dd7601b877fb5be999f5a5801d300d2c0d334b015ab8.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2016/05/08/Activity总结/">
+				
+				Activity总结</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2016/05/08/Activity总结/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> May 8, 2016
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2016/05/08/Activity总结/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+		</div>
+	
+	<br>
+	
+	<div class='pagination'>
+	
+		<div class="pagination-item">
+			<a href="/" class="prev grow"><b><i class='fas fa-arrow-circle-left'></i></b></a>
+		</div>
+	
+	
+	
+	
+		
+		
+		<div class="pagination-item">
+			
+			
+				
+					<a class='grow' href="/">1</a>
+				
+			
+		</div>
+		
+		
+	
+		
+		
+		<div class="pagination-item">
+			
+			
+				<span>2</span>
+			
+		</div>
+		
+		
+	
+	
+</div>
+</div>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">Zijian Liu </a> @ 2021</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/Liuzjdev' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'tBcysyoj9731OUF5uYiySi1A-gzGzoHsz',
+        appKey: '9Y8T0FcYUEurAkpRRfii3G2V',
+        placeholder: '元芳，你怎么看',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+    loadjs.ready('post-version', {
+      success: function(){
+        console.log('ready to run badge script')
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+      }
+    })
+  
+</script>
+
+
+    
+<script type='text/javascript'>
+  
+    function getIP(json) {
+      loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+    loadjs.ready('post-visit-comment-count', {
+      success: function(){
+          LeanCloud.init('tBcysyoj9731OUF5uYiySi1A-gzGzoHsz', '9Y8T0FcYUEurAkpRRfii3G2V');
+          var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2017/05/09/《Android开发艺术探索》第二章笔记/', json.ip);
+          leanCloud.fetchCommentCount('/2017/05/09/《Android开发艺术探索》第二章笔记/');
+          leanCloud.fetchVisitCount('/2017/05/09/《Android开发艺术探索》第二章笔记/');
+          leanCloud.fetchThumbUpCount('/2017/05/09/《Android开发艺术探索》第二章笔记/');
+          leanCloud.getCommentCount('/2017/05/09/《Android开发艺术探索》第二章笔记/', function(count){
+              var el = document.querySelector('#hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2017/05/09/《Android开发艺术探索》第二章笔记/', function(count){
+              var el = document.querySelector('#hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2017/05/09/《Android开发艺术探索》第二章笔记/', function(count){
+              var el = document.querySelector('#hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2017/05/09/《Android开发艺术探索》第二章笔记/', function(isThumbUp){
+              var el = document.querySelector('#hashit_a1622ec9174a39f7e2287346dde9397036ca0c58229bfe3ee56d95ed6c4b6741 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2017/05/03/手机连接电脑不读手机的终极解决方案/', json.ip);
+          leanCloud.fetchCommentCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/');
+          leanCloud.fetchVisitCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/');
+          leanCloud.fetchThumbUpCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/');
+          leanCloud.getCommentCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/', function(count){
+              var el = document.querySelector('#hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/', function(count){
+              var el = document.querySelector('#hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2017/05/03/手机连接电脑不读手机的终极解决方案/', function(count){
+              var el = document.querySelector('#hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2017/05/03/手机连接电脑不读手机的终极解决方案/', function(isThumbUp){
+              var el = document.querySelector('#hashit_ce73cdfd9b53e11743dad9dfc34a2d61a55dc68d1baf37f0b4b51e873db7d970 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/', json.ip);
+          leanCloud.fetchCommentCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/');
+          leanCloud.fetchVisitCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/');
+          leanCloud.fetchThumbUpCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/');
+          leanCloud.getCommentCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/', function(count){
+              var el = document.querySelector('#hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/', function(count){
+              var el = document.querySelector('#hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/', function(count){
+              var el = document.querySelector('#hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2017/04/10/如何让程序返回桌面后，重新进入时不加载启动页/', function(isThumbUp){
+              var el = document.querySelector('#hashit_1f5d73ed10caa4feee763c7839d9435121f9c7d2bc73877677d7fb12ffae5cdc .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2017/03/02/EventBus使用笔记/', json.ip);
+          leanCloud.fetchCommentCount('/2017/03/02/EventBus使用笔记/');
+          leanCloud.fetchVisitCount('/2017/03/02/EventBus使用笔记/');
+          leanCloud.fetchThumbUpCount('/2017/03/02/EventBus使用笔记/');
+          leanCloud.getCommentCount('/2017/03/02/EventBus使用笔记/', function(count){
+              var el = document.querySelector('#hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2017/03/02/EventBus使用笔记/', function(count){
+              var el = document.querySelector('#hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2017/03/02/EventBus使用笔记/', function(count){
+              var el = document.querySelector('#hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2017/03/02/EventBus使用笔记/', function(isThumbUp){
+              var el = document.querySelector('#hashit_6d08442a6301799cb28edeb1736fd1ba13a0f468cd1ce701dd46964c16af4a51 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/12/18/Android开发配置wifi调试教程/', json.ip);
+          leanCloud.fetchCommentCount('/2016/12/18/Android开发配置wifi调试教程/');
+          leanCloud.fetchVisitCount('/2016/12/18/Android开发配置wifi调试教程/');
+          leanCloud.fetchThumbUpCount('/2016/12/18/Android开发配置wifi调试教程/');
+          leanCloud.getCommentCount('/2016/12/18/Android开发配置wifi调试教程/', function(count){
+              var el = document.querySelector('#hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/12/18/Android开发配置wifi调试教程/', function(count){
+              var el = document.querySelector('#hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/12/18/Android开发配置wifi调试教程/', function(count){
+              var el = document.querySelector('#hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/12/18/Android开发配置wifi调试教程/', function(isThumbUp){
+              var el = document.querySelector('#hashit_31464258bee59531fcf665daa145df2c11ad7f6d829aea4ee9e7ef638f0c3d52 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/', json.ip);
+          leanCloud.fetchCommentCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/');
+          leanCloud.fetchVisitCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/');
+          leanCloud.fetchThumbUpCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/');
+          leanCloud.getCommentCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/', function(count){
+              var el = document.querySelector('#hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/', function(count){
+              var el = document.querySelector('#hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/', function(count){
+              var el = document.querySelector('#hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/11/04/丢掉系统自带的矮挫丑Toast吧，打造属于你自己的Toast/', function(isThumbUp){
+              var el = document.querySelector('#hashit_b2a931d620d712d74a962c9ec8b924ade8e5adff1aa30e09829fbd87ffd90ed4 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/', json.ip);
+          leanCloud.fetchCommentCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/');
+          leanCloud.fetchVisitCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/');
+          leanCloud.fetchThumbUpCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/');
+          leanCloud.getCommentCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/', function(count){
+              var el = document.querySelector('#hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/', function(count){
+              var el = document.querySelector('#hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/', function(count){
+              var el = document.querySelector('#hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/10/09/还在为右键没有svn菜单发愁？简单几步给你变出来/', function(isThumbUp){
+              var el = document.querySelector('#hashit_f811320dc66573601224be23a16f05831d53c8a0fccaa0b63487ad4970e91ca9 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/10/08/仿微信聊天列表之RecyclerView多布局/', json.ip);
+          leanCloud.fetchCommentCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/');
+          leanCloud.fetchVisitCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/');
+          leanCloud.fetchThumbUpCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/');
+          leanCloud.getCommentCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/', function(count){
+              var el = document.querySelector('#hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/', function(count){
+              var el = document.querySelector('#hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/10/08/仿微信聊天列表之RecyclerView多布局/', function(count){
+              var el = document.querySelector('#hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/10/08/仿微信聊天列表之RecyclerView多布局/', function(isThumbUp){
+              var el = document.querySelector('#hashit_712e8a3b3784970516f2d6eb46e21ba846cfdae87e3261d364f55fcda798e09a .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/09/06/Android Studio SVN使用手册/', json.ip);
+          leanCloud.fetchCommentCount('/2016/09/06/Android Studio SVN使用手册/');
+          leanCloud.fetchVisitCount('/2016/09/06/Android Studio SVN使用手册/');
+          leanCloud.fetchThumbUpCount('/2016/09/06/Android Studio SVN使用手册/');
+          leanCloud.getCommentCount('/2016/09/06/Android Studio SVN使用手册/', function(count){
+              var el = document.querySelector('#hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/09/06/Android Studio SVN使用手册/', function(count){
+              var el = document.querySelector('#hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/09/06/Android Studio SVN使用手册/', function(count){
+              var el = document.querySelector('#hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/09/06/Android Studio SVN使用手册/', function(isThumbUp){
+              var el = document.querySelector('#hashit_aaa37c4b88736481e0fc4d6caa29f338d09438d6520aafd6950f5d3f5080aeba .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2016/05/08/Activity总结/', json.ip);
+          leanCloud.fetchCommentCount('/2016/05/08/Activity总结/');
+          leanCloud.fetchVisitCount('/2016/05/08/Activity总结/');
+          leanCloud.fetchThumbUpCount('/2016/05/08/Activity总结/');
+          leanCloud.getCommentCount('/2016/05/08/Activity总结/', function(count){
+              var el = document.querySelector('#hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2016/05/08/Activity总结/', function(count){
+              var el = document.querySelector('#hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2016/05/08/Activity总结/', function(count){
+              var el = document.querySelector('#hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2016/05/08/Activity总结/', function(isThumbUp){
+              var el = document.querySelector('#hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+      }
+    })
+    }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('tBcysyoj9731OUF5uYiySi1A-gzGzoHsz', '9Y8T0FcYUEurAkpRRfii3G2V');
+// console.log(post);
+// $('.Card').each(function(){
+//     var post_url = $(this).attr('id');
+//     var true_url = $(this).find('.Card-title a').first().attr('href');
+//     var card = this;
+//     post.getCommentCount(post_url, function(count){
+//         $(card).find('.card-comment-count').first().text(count);
+//     });
+//     post.getVisitCount(post_url, function(count){
+//         $(card).find('.card-visit-count').first().text(count);
+//     });
+    
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

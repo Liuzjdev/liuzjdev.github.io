@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Activity总结 - Liuzj的博客</title>
+  
+
+  
+  
+  <meta name="description" content="Android developer">
+  <meta name="author" content="Zijian Liu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-38342303-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/avatar.png' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Liuzj的博客</a>
+			</h1>
+			<subtitle>
+				思考一切
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
+
+</div>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/blue-shadow/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2016/05/08/Activity总结/" data-name='Activity总结' data-version="">
+
+    <!-- Title -->
+    <div class='article-header'>
+         
+         <h1 class='article-title'>
+            <a href="/2016/05/08/Activity总结/">
+                Activity总结
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class='article-meta'>
+    <ul>
+            <li><i class='fa fa-calendar'></i> May 8, 2016</li>
+            
+            <li class='comment-button'><a href='#article-comment'><i class='fa fa-comments'></i> <span id='article-comment-count'>0</span></a></li>
+            <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            <li class='thumb-up-button' id='thumb-up-button'><i class="far fa-thumbs-up fa-lg" id='thumb-up-icon'></i> <span id='article-thumbup-count'>0</span></li>
+            
+            <li><i class="fa fa-user"></i> Zijian Liu</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href=https://creativecommons.org/licenses/by-nc-nd/4.0/>CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class='tag-1'><a href="/tags/Activity/">Activity</a></label>
+		
+	
+		
+			<label class='tag-2'><a href="/tags/四大组件/">四大组件</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class='article-cards'>
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                Zijian Liu
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id='chart-post-visit'></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id='text-post-summary'>...</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id='article-toc'>
+    
+        
+
+
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
+
+</div>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/blue-shadow/toc.svg" alt="">
+</div>
+
+    </div>
+    <div class='article-content'>
+    <p><em>看了标题也许你会想，也许你会说，activity我天天用，我最了解不过了，没有什么是我不清楚的。你怕是在唬我吧？那下面就看看我说的这些你都了解嘛</em></p>
+<h3 id="基础知识">基础知识</h3>
+<ul>
+<li>
+<h4 id="正常情况下的生命周期">正常情况下的生命周期</h4>
+<ul>
+<li>
+<p>onCreate：表示Activity正在被创建，我们可以做一些初始化工作，没啥子可说的。</p>
+</li>
+<li>
+<p>onRestart：当当前Activity从不可见重新变为可见状态时，该方法会被调用。</p>
+</li>
+<li>
+<p>onStart：这时Activity已经可见的，但是处于后台，无法和用户交互。</p>
+</li>
+<li>
+<p>onResume：这时Activity已经可见的，但是处于前台。</p>
+</li>
+<li>
+<p>onPause：在这个方法可以做一些存储数据，停止动画的操作，但是不能太耗时，因为这会影响到新Activity的显示，onPause必须执行完，新Activity的onResume才会执行。</p>
+</li>
+<li>
+<p>onStop:Activity即将停止，可以做一些稍微重量级的回收工作，同样不能太耗时。</p>
+</li>
+<li>
+<p>onDestory:表示Activity即将销毁，我们可以做一些回收工作和资源释放工作。</p>
+</li>
+</ul>
+<p>Activity第一次启动会调用onCreate–&gt;onStart–&gt;onResume,当用户打开新的Activity或者切换到桌面的时候，会调用onPause–&gt;onStop，<em>如果这个Activity采用透明主题，不会调用onStop,是因为新Activity透明主题我们还能看到下面那个之前Activity，所以不会调用onStop</em>，再回到原Activity时调用onRestart–&gt;onStart–&gt;onResume.</p>
+</li>
+<li>
+<h4 id="异常情况下的生命周期">异常情况下的生命周期</h4>
+<ul>
+<li>
+<p>资源相关的系统配置发生改变导致Avtivity被杀死并重新创建</p>
+</li>
+<li>
+<p>资源不足时导致优先级低的Activity被杀死</p>
+</li>
+<li>
+<p>…</p>
+</li>
+</ul>
+<p><em>Activity会调用onSaveInstanceState方法，系统自动为我们做了一定的恢复工作，并且重启为我们恢复这些数据，比如文本框中用户输入的数据，listView滚动位置等，具体的我们可以查看特定View的源码。</em></p>
+</li>
+<li>
+<h4 id="activity的启动模式">Activity的启动模式</h4>
+<p>1、使用场景</p>
+<ul>
+<li>
+<p>standard：当需要每次请求都新开一个实例的时候，比如，浏览器开多个浏览窗口。</p>
+</li>
+<li>
+<p>singleTop：适合作为接受通知的启动界面，比如，客户端收到10条推送，如果是标准模式，分别点击这10个推送，就会启动10个这样的显示内容的界面，而如果是singleTop，则只会打开一个显示界面。</p>
+</li>
+<li>
+<p>singleTask：适合作为程序的入口，不管其他程序打开该界面多少次，都只会在任务栈中存在一份，比如浏览器的启动界面。</p>
+</li>
+<li>
+<p>singleInstance：适合永远都不会变化的界面，比如闹钟的提醒界面，在比如拨号程序的呼叫界面。</p>
+</li>
+</ul>
+<p>2、IntentFilter的匹配规则</p>
+<ul>
+<li>
+<p>action的匹配规则：要求Intent中的action存在且必须和过滤规则中的其中一个action相同，这个区分大小写，如果相同的字符串，大小写字母不同，action会匹配失败。</p>
+</li>
+<li>
+<p>category匹配规则：这个可有可无，如果有，则必须和过滤规则中的其中一个category相同，如果不写的话，在启动Activity时系统会自动加上&quot;android.intent.category.DEFAULT&quot;</p>
+</li>
+<li>
+<p>data可进一步分为uri（由scheme、host、port、path | pathPattern | pathPrefix这4部分组成）和mimetype。Intent的uri可通过setData方法设置，mimetype可通过setType方法设置。隐式Intent也必须指定data。同action类似，只要Intent的data只要与Intent Filter中的任一个data声明完全相同，data方面就匹配成功。需要注意的是：若Intent Filter的data声明部分未指定uri，则缺省uri为content或file，Intent中的uri的scheme部分需为content或file才能匹配；若要为Intent指定完整的data，必须用setDataAndType方法，原因请看setData和setType方法的源码：</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>
+public Intent setData(Uri data) {
+    mData = data;
+    mType = null;
+    return this;
+}
+
+public Intent setType(String type) {
+    mData = null;
+    mType = type;
+    return this;
+}
+</code></pre>
+<p>从以上代码可以看到，setData会把mimeType置为null，setType会把uri置为null。下面我们来举例说明一下data的匹配。首先我们先来看一下Intent Filter中指定data的语法：</p>
+<pre><code>&lt;data android:scheme=&quot;...“
+      android:host=&quot;...&quot;
+      android:port=&quot;...&quot;
+      android:path=&quot;...&quot;
+      android:pathPattern=&quot;...&quot;
+      android:pathPrefix=&quot;...&quot;
+      android:mimeType=&quot;...&quot; /&gt;
+</code></pre>
+<p>其中scheme、host等各个部分无需全部指定。假如我们为MyActivity的Intent Filter指定了如下data：</p>
+<pre><code>&lt;intent-filter&gt;
+    &lt;data android:mimeType=&quot;vidoe/mpeg&quot; android:scheme=&quot;http&quot; android:host=&quot;www.xxx.com&quot; /&gt;
+    &lt;data android:mimeType=&quot;text/plain&quot; android:scheme=&quot;http&quot; /&gt;
+&lt;/intent-filter&gt;
+</code></pre>
+<p>那么我们的Intent想要匹配，mimeType可以为”text/plain&quot;或“video/mpeg&quot;,scheme必须为”http“，host则没有限制，因为第二个data没有指定host。</p>
+<h3 id="最后">最后</h3>
+<p><em>这就是我知道的关于activity的一些知识，若有叙述不清晰或是不准确的地方希望大家指出，如果你知道更多知识，欢迎给我评论，大家一起学习进步。谢谢观看</em></p>
+<h4 id="参考资料-android开发艺术探索">参考资料 《Android开发艺术探索》</h4>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id='article-comment'>
+            
+
+<h1>Comment</h1>
+
+  
+    <div id='valine'></div>
+  
+
+
+        </div>
+        
+</article>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">Zijian Liu </a> @ 2021</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/Liuzjdev' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
+
+</div>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/blue-shadow/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'tBcysyoj9731OUF5uYiySi1A-gzGzoHsz',
+        appKey: '9Y8T0FcYUEurAkpRRfii3G2V',
+        placeholder: '元芳，你怎么看',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_dce903306aaed3dcfe47934df6e9593deeccf6a1d93039af6c5a3de5db130194').update('hashit_8229de5c64ae515fab3d8b8bda079c3b9111fa90f9270ffcba68fb3077d780ca', function(){});
+  });
+  
+</script>
+
+
+    
+<script type='text/javascript'>
+  
+  // update cookie if this page is opened (directly)
+  function getIP(json) {
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+  loadjs.ready('post-visit-comment-count', function(){
+    
+    
+    LeanCloud.init('tBcysyoj9731OUF5uYiySi1A-gzGzoHsz', '9Y8T0FcYUEurAkpRRfii3G2V');
+    var leanCloud = LeanCloud.getInstance();
+    leanCloud.fetchIsThumbUp('/2016/05/08/Activity总结/', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/2016/05/08/Activity总结/', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/2016/05/08/Activity总结/', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+          
+        }else{
+          leanCloud.addThumbUpRecord('/2016/05/08/Activity总结/', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/2016/05/08/Activity总结/', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/2016/05/08/Activity总结/', json.ip);
+    leanCloud.fetchCommentCount('/2016/05/08/Activity总结/');
+    leanCloud.fetchVisitCount('/2016/05/08/Activity总结/');
+    leanCloud.fetchThumbUpCount('/2016/05/08/Activity总结/');
+    leanCloud.getCommentCount('/2016/05/08/Activity总结/', function(count){
+        var el = document.querySelector('#article-comment-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getVisitCount('/2016/05/08/Activity总结/', function(count){
+        var el = document.querySelector('#article-visit-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getThumbUpCount('/2016/05/08/Activity总结/', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/2016/05/08/Activity总结/', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
+  });
+  }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('tBcysyoj9731OUF5uYiySi1A-gzGzoHsz', '9Y8T0FcYUEurAkpRRfii3G2V');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

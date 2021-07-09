@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Hexo Theme Cutie - Liuzj的博客</title>
+  
+
+  
+  
+  <meta name="description" content="Android developer">
+  <meta name="author" content="Zijian Liu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-38342303-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/avatar.png' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Liuzj的博客</a>
+			</h1>
+			<subtitle>
+				思考一切
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+    #changelog-more {
+        display: none;
+    }
+    #changelog-more-button {
+        border-radius: 10px;
+        width: 100%;
+        border: 1px solid #aaa;
+        padding: 3px;
+        display: block;
+        text-align: center;
+    }
+    .badges{
+        text-align: center;
+        margin-top: 2em;
+    }
+</style>
+<div class='article'>
+<div class="article-header">
+    <br>
+    <h1 class='article-title' style='width: 100%; text-align:center'>
+        Hexo Theme: Cutie
+    </h1>
+    <br>
+</div>
+    
+<div class='badges'>
+        <a href="https://github.com/qutang/hexo-theme-cutie/" target="_blank"><img src="https://img.shields.io/github/stars/qutang/hexo-theme-cutie.svg?style=social&label=Stars" alt=""></a>
+        <a href="https://github.com/qutang/hexo-theme-cutie/" target="_blank"><img src="https://img.shields.io/github/forks/qutang/hexo-theme-cutie.svg?style=social&label=Fork" alt=""></a>
+        <a href="https://github.com/qutang/hexo-theme-cutie/releases/latest/" target="_blank"><img src="https://img.shields.io/github/release/qutang/hexo-theme-cutie.svg" alt=""></a>
+        <a href="https://github.com/qutang/hexo-theme-cutie/issues/" target="_blank"><img src="https://img.shields.io/github/issues/qutang/hexo-theme-cutie.svg" alt=""></a>
+        <a href="https://github.com/qutang/hexo-theme-cutie/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/qutang/hexo-theme-cutie.svg" alt=""></a>
+</div>
+<div class='article-content'>
+        
+        <h2>Introduction</h2>
+        <p>Theme cutie is a clean and responsive hexo theme that favors multiple schemes, flexible configuration and unique human interaction features.</p>
+        <blockquote>
+            <img src="archive.png" alt="">
+            <img src="home-mobile.png" alt="">
+            <img src="home.png" alt="">
+            <img src="post-mobile.png" alt="">
+            <img src="post.png" alt="">
+        </blockquote>
+        
+        <h2>Change logs</h2>
+        <div class='changelog'>
+            <div id='changelog-display'>
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.1.4' target='_blank'>v2.1.4</a></h3>
+                <ul>
+                    
+                        <li>New logo</li>
+                    
+                        <li>Fix favicon configuration bug</li>
+                    
+                        <li>Use local file for leancloud SDK</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.1.3' target='_blank'>v2.1.3</a></h3>
+                <ul>
+                    
+                        <li>Fix <a href='https://github.com/qutang/hexo-theme-cutie/issues/95' target='_blank'>#95</a>.</li>
+                    
+                        <li>Minor adjust the appearance of archive pages.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.1.2' target='_blank'>v2.1.2</a></h3>
+                <ul>
+                    
+                        <li>Minor adjust the colors of meta icons.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.1.1' target='_blank'>v2.1.1</a></h3>
+                <ul>
+                    
+                        <li>Close 页面显示issue <a href='https://github.com/qutang/hexo-theme-cutie/issues/92' target='_blank'>#92</a>.</li>
+                    
+                        <li>Replace IP detector library.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.1.0' target='_blank'>v2.1.0</a></h3>
+                <ul>
+                    
+                        <li>Add Thumb Up functionality. Refer to <a href='https://github.com/qutang/hexo-theme-cutie/issues/89' target='_blank'>#89</a>.</li>
+                    
+                </ul>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+            <div id='changelog-more'>
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.17' target='_blank'>v2.0.17</a></h3>
+                <ul>
+                    
+                        <li>Remove unused scheme (Close <a href='https://github.com/qutang/hexo-theme-cutie/issues/81' target='_blank'>#81</a>)</li>
+                    
+                        <li>Remove check new version functionality (not reliable)</li>
+                    
+                        <li>Adjust header appearance</li>
+                    
+                        <li>Adjust mobile view Refer to <a href='https://github.com/qutang/hexo-theme-cutie/issues/61' target='_blank'>#61</a>.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.16' target='_blank'>v2.0.16</a></h3>
+                <ul>
+                    
+                        <li>Use jdenticon when post icon is unavailable.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.15' target='_blank'>v2.0.15</a></h3>
+                <ul>
+                    
+                        <li>Bug fix of searching result links. Refer to <a href='https://github.com/qutang/hexo-theme-cutie/issues/85' target='_blank'>#85</a>.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.14' target='_blank'>v2.0.14</a></h3>
+                <ul>
+                    
+                        <li>Bug fix during indexing search content. Refer to <a href='https://github.com/qutang/hexo-theme-cutie/issues/84' target='_blank'>#84</a>.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.13' target='_blank'>v2.0.13</a></h3>
+                <ul>
+                    
+                        <li>Bug fix when displaying month name in the archive page <a href='https://github.com/qutang/hexo-theme-cutie/issues/66' target='_blank'>#66</a>. Thanks to <a href='https://github.com/imjdl' target='_blank'>@imjdl</a>.</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.12' target='_blank'>v2.0.12</a></h3>
+                <ul>
+                    
+                        <li>Linkify meta icons on cards</li>
+                    
+                        <li>Minor appearance tweak</li>
+                    
+                        <li>Fix a bug in displaying unread badge</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.11' target='_blank'>v2.0.11</a></h3>
+                <ul>
+                    
+                        <li>Better support for post excerpt</li>
+                    
+                        <li>Support <a href='http://livere.com' target='_blank'>livere</a> comment system</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.10' target='_blank'>v2.0.10</a></h3>
+                <ul>
+                    
+                        <li>Import bug fix when parsing theme configuration (recommend to update)</li>
+                    
+                        <li>Polish search page</li>
+                    
+                        <li>Add Italian translation (contributed by <a href='https://github.com/Fastbyte01' target='_blank'>@fastbyte01</a>)</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.9' target='_blank'>v2.0.9</a></h3>
+                <ul>
+                    
+                        <li>Change primary font to Segoe UI</li>
+                    
+                        <li>Optimize animation</li>
+                    
+                        <li>Adjust appearance</li>
+                    
+                        <li>Bug fix</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.8' target='_blank'>v2.0.8</a></h3>
+                <ul>
+                    
+                        <li>Bug fixes</li>
+                    
+                        <li>Announcement will only be shown when visitor first sees it</li>
+                    
+                        <li>Automate unread badge and post version management. No need to manually update <code>version</code> variable, set variable <code>enable_unread_badge</code> to <code>true</code> or <code>false</code> instead.</li>
+                    
+                        <li>Optimize post visit and comment counts (reduce network requests)</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.7' target='_blank'>v2.0.7</a></h3>
+                <ul>
+                    
+                        <li>Auto hide/show of header and fotter during scrolling</li>
+                    
+                        <li>Redesign of announcement, supporting both post annoucement and site announcement</li>
+                    
+                        <li>No need to add search page yourself</li>
+                    
+                        <li>No need to add 404 page yourself</li>
+                    
+                        <li>Add support to use tencent 404 charity page</li>
+                    
+                        <li>Change search from Google to in-site search</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.6-beta' target='_blank'>v2.0.6-beta</a></h3>
+                <ul>
+                    
+                        <li>Bug fixes</li>
+                    
+                </ul>
+                
+            
+                
+                <h3><a href='https://github.com/qutang/hexo-theme-cutie/releases/tag/v2.0.5-beta' target='_blank'>v2.0.5-beta</a></h3>
+                <ul>
+                    
+                        <li>Support animation</li>
+                    
+                        <li>Support post copyright</li>
+                    
+                        <li>Support light gallery zooming</li>
+                    
+                        <li>Support post comment and visit counting</li>
+                    
+                        <li>Support light gallery for all images in a post</li>
+                    
+                        <li>Group posts by month adaptively in archive page</li>
+                    
+                </ul>
+                
+            
+            </div>
+            <a id='changelog-more-button' href='#changelog-more'>See more</a>
+        </div>
+        <h2>Tutorials</h2>
+        <p><a href='/2018/02/12/hexo-theme-cutie-v2-tutorial/'>v2.x tutorial in English</a></p>
+        <p><a href='/2017/06/27/Hexo-theme-cutie/'>v1.x tutorial in English</a></p>
+        <h2 id="help-needed">Help needed</h2>
+<p>I appreciate everyone’s love and help on contributing your ideas and effort on this theme, and will give credits to you.</p><p></p>
+<h3 id="writing">Writing</h3>
+<ul>
+<li>Contribute more languages.</li>
+<li>Translate tutorial into other languages.</li>
+</ul>
+<h3 id="design">Design</h3>
+<ul>
+<li>Design new icon sets or icons (I will add them to theme’s native support).</li>
+<li>Design logo for the theme.</li>
+<li>Make mockup designs for NEW schemes (please contact me first to discuss your idea so that your effort will not be wasted).</li>
+</ul>
+<h3 id="development">Development</h3>
+<ul>
+<li>Implement new features (please contact me first to communicate).</li>
+</ul>
+<h3 id="support">Support</h3>
+<ul>
+<li>Add your site to the showcases if you are using this theme (send me your website’s link).</li>
+<li>Buy me a cup of Kung Fu tea! <a href="https://www.paypal.me/QuTang/2.99" target="_blank" rel="noopener">PayPal</a></li>
+</ul>
+<blockquote><p><img src="wechat_pay.jpg" alt="微信赞赏">
+<img src="alipay_pay.jpg" alt="支付宝赞赏"></p>
+</blockquote>
+
+        <h2>Aknowledgement</h2>
+        <ul>
+            
+                <li><a href="https://ned.im/noty/" title="noty.js notification library" target="_blank" rel="noopener">noty.js notification library</a></li>
+            
+                <li><a href="https://atomiks.github.io/tippyjs/" title="tippy.js tooltip library" target="_blank" rel="noopener">tippy.js tooltip library</a></li>
+            
+                <li><a href="http://wicky.nillia.ms/headroom.js/" title="headroom.js" target="_blank" rel="noopener">headroom.js</a></li>
+            
+                <li><a href="https://sachinchoolur.github.io/lightgallery.js/" title="lightgallery.js" target="_blank" rel="noopener">lightgallery.js</a></li>
+            
+                <li><a href="https://sachinchoolur.github.io/lightgallery.js/" title="lightgallery.js zoom plugin" target="_blank" rel="noopener">lightgallery.js zoom plugin</a></li>
+            
+                <li><a href="https://jquery.com/" title="jQuery library" target="_blank" rel="noopener">jQuery library</a></li>
+            
+                <li><a href="https://github.com/imsun/gitment" title="gitment comment system" target="_blank" rel="noopener">gitment comment system</a></li>
+            
+                <li><a href="https://valine.js.org/" title="valine comment system" target="_blank" rel="noopener">valine comment system</a></li>
+            
+                <li><a href="https://leancloud.cn/" title="leancloud BAAS" target="_blank" rel="noopener">leancloud BAAS</a></li>
+            
+                <li><a href="https://www.mathjax.org/" title="mathjax library" target="_blank" rel="noopener">mathjax library</a></li>
+            
+                <li><a href="https://github.com/js-cookie/js-cookie" title="js-cookie.js: A javascript cookie manipulation library" target="_blank" rel="noopener">js-cookie.js: A javascript cookie manipulation library</a></li>
+            
+                <li><a href="https://fontawesome.com/" title="fontawesome" target="_blank" rel="noopener">fontawesome</a></li>
+            
+                <li><a href="http://fusejs.io/" title="fuse.js: A javascript fuzzy search library" target="_blank" rel="noopener">fuse.js: A javascript fuzzy search library</a></li>
+            
+                <li><a href="https://github.com/h2non/jshashes" title="hashes.js: A javascript hashing library" target="_blank" rel="noopener">hashes.js: A javascript hashing library</a></li>
+            
+                <li><a href="https://github.com/muicss/loadjs" title="loadjs.js: A javascript dependency management library" target="_blank" rel="noopener">loadjs.js: A javascript dependency management library</a></li>
+            
+                <li><a href="https://github.com/daneden/animate.css" title="animate.css: A CSS framework for predefined animations" target="_blank" rel="noopener">animate.css: A CSS framework for predefined animations</a></li>
+            
+                <li><a href="https://www.npmjs.com/package/striptags" title="striptags" target="_blank" rel="noopener">striptags</a></li>
+            
+                <li><a href="https://jdenticon.com" title="Jdenticon: Open source library for generating identicons" target="_blank" rel="noopener">Jdenticon: Open source library for generating identicons</a></li>
+            
+        </ul>
+        <h2>Copyright</h2>
+        <div>
+        <p>Copyright 2018 Qu Tang</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+</div>
+</div>
+
+<script>
+    document.getElementById('changelog-more-button').onclick = function() {
+        if(this.innerText === 'See more'){
+            document.getElementById('changelog-more').style.display = 'block';
+            document.getElementById('changelog-more').classList.add('animated');
+            document.getElementById('changelog-more').classList.add('slideInLeft');
+            this.setAttribute('href', '#changelog-display');
+            this.innerText = 'Collapse changelogs';
+        }else{
+            this.setAttribute('href', '#changelog-more');
+            document.getElementById('changelog-more').style.display = 'none';
+            this.innerText = 'See more';
+        }
+    };
+</script>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">Zijian Liu </a> @ 2021</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/Liuzjdev' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'tBcysyoj9731OUF5uYiySi1A-gzGzoHsz',
+        appKey: '9Y8T0FcYUEurAkpRRfii3G2V',
+        placeholder: '元芳，你怎么看',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+</script>
+
+
+    
+<script type='text/javascript'>
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
